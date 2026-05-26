@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartlarım — KVKK Aydınlatma Metni</title>
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.6;background:var(--bg);color:var(--fg)}
+h1,h2,h3{line-height:1.3}
+h1{border-bottom:2px solid var(--accent);padding-bottom:8px}
+h2{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+h3{margin-top:24px}
+.meta{color:var(--muted);font-size:.9em;margin-bottom:24px}
+nav{margin:24px 0}
+nav a{display:inline-block;color:var(--accent);text-decoration:none;margin:8px 16px 8px 0;padding:8px 14px;border:1px solid var(--accent);border-radius:6px;font-size:.9em}
+nav a:hover{background:var(--accent);color:var(--bg)}
+nav a.lang{border-style:dashed}
+table{border-collapse:collapse;margin:16px 0;width:100%;font-size:.9em}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--warn);font-weight:600}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--warn);border-left:4px solid var(--warn-b);border-radius:4px}
+code{background:var(--border);padding:1px 6px;border-radius:3px;font-size:.9em}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85em}
+ul,ol{padding-left:20px}
+li{margin:4px 0}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav><a href="index.html">⬅ Ana sayfa</a><a href="privacy.html">Gizlilik</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">KVKK Aydınlatma</a><a href="terms.html">Kullanıcı Sözleşmesi</a><a class="lang" href="en/kvkk.html">🇬🇧 English</a></nav>
+<h1>KVKK Aydınlatma Metni — Kartlarım</h1>
+<blockquote>
+<p><strong>v2 — local-first mimari (2026-05-26):</strong> Önceki dönemlerde planlanan &quot;Türkiye&#39;de Cloud Sync&quot; hizmeti uygulamaya alınmamıştır. Finansal veriler yalnızca kullanıcı cihazında tutulur, yedeklemeler kullanıcının kendi bulut hizmetine (iCloud / Google Drive vb.) gider. Bu metin yeni mimariye göre revize edilmiştir.</p>
+</blockquote>
+<hr>
+<h2>KİŞİSEL VERİLERİN KORUNMASI KANUNU KAPSAMINDA AYDINLATMA METNİ</h2>
+<p><strong>Veri Sorumlusu:</strong> Fatih Acı<br><strong>İletişim:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Uygulama:</strong> Kartlarım — Kişisel Finansal Takip Asistanı<br><strong>Yürürlük Tarihi:</strong> 26 Mayıs 2026 (v2)</p>
+<p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu&#39;nun (&quot;KVKK&quot;) 10. maddesi uyarınca hazırlanmıştır.</p>
+<blockquote>
+<p><strong>Önemli Mimari Bilgisi:</strong> Kartlarım <strong>local-first</strong> bir uygulamadır. Finansal verileriniz (kart, borç, ödeme, gider) <strong>yalnızca cihazınızda</strong> tutulur; tarafımıza ait herhangi bir sunucuda saklanmaz. Yedeklemeler kendi seçtiğiniz bulut hizmetine gider — biz tutmayız, görmeyiz, erişemeyiz.</p>
+</blockquote>
+<h3>1. İşlenen Kişisel Veriler ve İşleme Amaçları</h3>
+<p>Kartlarım, yeni mimarisi gereği <strong>asgari düzeyde</strong> kişisel veri işler:</p>
+<table>
+<thead>
+<tr>
+<th>Veri Türü</th>
+<th>İşlenme Amacı</th>
+<th>Nerede Tutulur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google hesap e-posta ve adı</td>
+<td>Kimlik doğrulama (Google Sign-In)</td>
+<td>Google Firebase Auth (yurt dışı)</td>
+</tr>
+<tr>
+<td>Firebase UID (anonim kullanıcı kimliği)</td>
+<td>Aboneliği kullanıcıya bağlama</td>
+<td>Google Firebase + RevenueCat (yurt dışı)</td>
+</tr>
+<tr>
+<td>Abonelik durumu (premium / free)</td>
+<td>Premium özelliklerin açılması/kapanması</td>
+<td>RevenueCat (yurt dışı)</td>
+</tr>
+<tr>
+<td>Anonim hata raporları (Crashlytics)</td>
+<td>Uygulama hatalarının tespiti ve giderilmesi</td>
+<td>Google Firebase Crashlytics (yurt dışı)</td>
+</tr>
+<tr>
+<td>Anonim kullanım istatistikleri (Analytics)</td>
+<td>Uygulamanın geliştirilmesi</td>
+<td>Google Firebase Analytics (yurt dışı)</td>
+</tr>
+<tr>
+<td>Reklam ID (sadece free planda, anonim)</td>
+<td>Reklam gösterimi (rıza ile kişiselleştirme)</td>
+<td>Google AdMob / AppLovin (yurt dışı)</td>
+</tr>
+<tr>
+<td>Cihaz modeli, OS sürümü</td>
+<td>Hata raporlarına bağlam sağlama</td>
+<td>Firebase Crashlytics (yurt dışı)</td>
+</tr>
+</tbody></table>
+<h4>1.1. Tarafımızca İşlenmeyen Veriler</h4>
+<p>Aşağıdaki veriler <strong>tarafımızdan işlenmez, tutulmaz, görüntülenmez</strong>:</p>
+<ul>
+<li><strong>Finansal verileriniz</strong> — kart limiti, borç, ödeme geçmişi, sabit giderler, krediler, ertelemeler: yalnızca cihazınızdaki yerel SQLite veritabanında tutulur</li>
+<li><strong>Yedek dosyalarınız</strong> — sizin oluşturup kendi bulutunuza yüklediğiniz şifreli ZIP dosyaları (Bölüm 6)</li>
+<li><strong>Banka şifresi, banka API erişim bilgileri</strong></li>
+<li><strong>Kredi kartı tam numarası</strong> (yalnızca isteğe bağlı son 4 hane görsel etiket olarak)</li>
+<li><strong>CVC, kart güvenlik kodu</strong></li>
+<li><strong>Banka tahsilat / ödeme yönlendirme bilgisi</strong></li>
+<li><strong>Konum verisi</strong></li>
+<li><strong>Rehber, fotoğraf, dosya, medya, mikrofon</strong> (Smart Scan haricinde — orada yalnızca kullanıcı tetiklemesinde anlık çalışır, görüntü saklanmaz)</li>
+</ul>
+<blockquote>
+<p><strong>Snap-Sync Felsefesi:</strong> Kartlarım bankaya doğrudan erişmez. Kullanıcı banka uygulamasındaki rakamları manuel girer (snapshot). Bu nedenle Açık Bankacılık (Open Banking) regülasyonları uygulamamız için tetiklenmez. <strong>Bankaya bağlanmadığımız gibi, finansal verinizi sunucumuzda da tutmayız.</strong></p>
+</blockquote>
+<h3>2. Kişisel Verilerin Aktarıldığı Taraflar (Yurt Dışı Aktarım Dahil)</h3>
+<p>Aşağıdaki hizmet sağlayıcıların sunucuları yurt dışında (ABD/AB) bulunmaktadır; verilerin bir kısmı KVKK m.9 kapsamında yurt dışına aktarılmaktadır. Tüm aktarımlar ilgili kuruluşların Veri İşleme Sözleşmesi (DPA) ve/veya Standart Sözleşme Hükümleri (SCC) güvencesiyle yapılır.</p>
+<table>
+<thead>
+<tr>
+<th>Hizmet Sağlayıcı</th>
+<th>Aktarılan Veri</th>
+<th>Sunucu</th>
+<th>Hukuki Güvence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google LLC (Firebase Auth)</td>
+<td>E-posta, UID</td>
+<td>ABD/AB</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>Google LLC (Crashlytics)</td>
+<td>Anonim hata kaydı, cihaz/OS bilgisi</td>
+<td>ABD/AB</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>Google LLC (Analytics)</td>
+<td>Anonim kullanım istatistiği</td>
+<td>ABD/AB</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>Google LLC (AdMob)</td>
+<td>Anonim reklam ID, ad performansı</td>
+<td>ABD/AB</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>AppLovin Corp. (MAX mediation)</td>
+<td>Anonim reklam ID</td>
+<td>ABD</td>
+<td>AppLovin DPA</td>
+</tr>
+<tr>
+<td>RevenueCat Inc.</td>
+<td>appUserId, abonelik durumu, satın alma tarihi</td>
+<td>ABD</td>
+<td>RevenueCat DPA + SCC</td>
+</tr>
+<tr>
+<td>Apple Inc. (App Store)</td>
+<td>Abonelik metaverisi, satın alma kaydı</td>
+<td>ABD/İrlanda</td>
+<td>Apple DPA</td>
+</tr>
+<tr>
+<td>Google LLC (Play Store)</td>
+<td>Abonelik metaverisi, satın alma kaydı</td>
+<td>ABD/AB</td>
+<td>Google DPA</td>
+</tr>
+</tbody></table>
+<p><strong>Üçüncü taraflarla ticari amaçlarla veri paylaşılmaz, satılmaz.</strong></p>
+<p><strong>Tarafımıza ait sunucu yoktur.</strong> Mimari local-first olarak son halini almıştır; eski &quot;Türkiye&#39;de Cloud Sync&quot; planı uygulamaya alınmamıştır.</p>
+<h3>3. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Dayanağı</h3>
+<p>Kişisel veriler; uygulama içi Google Sign-In akışı, otomatik sistem kayıtları (Firebase) ve premium abonelik akışı (RevenueCat → Apple/Google Store) yoluyla toplanır.</p>
+<p><strong>Hukuki dayanak:</strong></p>
+<ul>
+<li><strong>KVKK md. 5/2-c (sözleşmenin kurulması ve ifası):</strong> Kimlik doğrulama (Firebase Auth), premium abonelik (RevenueCat / Apple / Google Play).</li>
+<li><strong>KVKK md. 5/2-f (meşru menfaat):</strong> Hata izleme (Crashlytics), kullanım analizi (Analytics) — kullanıcının temel hak ve özgürlüklerini zedelemeyen, uygulamanın kalitesini artırma amaçlı işleme.</li>
+<li><strong>KVKK md. 5/1 (açık rıza):</strong> Reklam personalizasyonu (AdMob UMP rıza ekranı). Rıza vermeseniz de uygulamayı kullanabilirsiniz; bu durumda kişiselleştirilmemiş reklam gösterilir.</li>
+</ul>
+<h3>4. Veri Sahibi Olarak Haklarınız (KVKK Madde 11)</h3>
+<p>KVKK&#39;nın 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:</p>
+<ul>
+<li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+<li>İşlenmişse buna ilişkin bilgi talep etme</li>
+<li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
+<li>Yurt içinde / dışında aktarıldığı tarafları bilme</li>
+<li>Verilerin düzeltilmesini, silinmesini veya yok edilmesini isteme</li>
+<li>Düzeltme/silme işleminin aktarıldığı taraflara bildirilmesini isteme</li>
+<li>Otomatik sistemler vasıtasıyla analiz edilmesi sonucu aleyhinize çıkan kararlara itiraz etme</li>
+<li>Kanuna aykırı işleme nedeniyle zarara uğraması halinde tazminat talep etme</li>
+</ul>
+<p><strong>Uygulama içi self-servis yöntemler:</strong></p>
+<ul>
+<li><strong>Düzeltme / erişim:</strong> Finansal verileriniz cihazınızda tutulduğundan, doğrudan uygulama içinden istediğiniz zaman düzenleyebilir, görüntüleyebilirsiniz.</li>
+<li><strong>Verilerimi indirme (KVKK m.11):</strong> Profil → &quot;Verilerimi İndir (KVKK)&quot; menüsünden cihazınızdaki tüm verileri JSON formatında alabilirsiniz. Bu hizmet hem ücretsiz hem de premium üyelere açıktır.</li>
+<li><strong>Silme (KVKK m.7):</strong> Profil → &quot;Hesabı Sil&quot; menüsünden hesabınızı ve verilerinizi kalıcı olarak silebilirsiniz (Bölüm 5).</li>
+</ul>
+<p><strong>E-posta ile başvuru:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a>. Başvurular Veri Sorumlusu Başvuru Tebliği uyarınca <strong>30 gün içinde</strong> ücretsiz olarak yanıtlanır.</p>
+<h3>5. Hesap Silme ve Veri Yok Etme</h3>
+<p><strong>Profil → &quot;Hesabı Sil&quot;</strong> menüsünden hesabınızı anında silebilirsiniz. <strong>Bu işlem geri alınamaz.</strong> Onayladığınızda:</p>
+<ul>
+<li>Cihazınızdaki tüm finansal verileriniz (kartlar, borçlar, ödemeler, giderler) kalıcı olarak silinir</li>
+<li>Firebase kimlik kaydınız (e-posta, UID) silinir</li>
+<li>RevenueCat üzerindeki abonelik kaydınız (anonimleştirilerek) sonlandırılır</li>
+<li>Crashlytics / Analytics anonim verileri, ilgili hizmetlerin saklama politikası gereği (~60-90 gün) sonunda otomatik silinir</li>
+</ul>
+<p><strong>30 gün bekleme süresi uygulanmaz; veri kalıcı olarak yok edilir.</strong> Yanlışlıkla silmemek için uygulama &quot;EMİN MİSİNİZ?&quot; onayını çift olarak alır.</p>
+<p><strong>Aktif premium aboneliğiniz varsa:</strong> Hesap silmeden önce App Store / Google Play hesap ayarlarınızdan aboneliğinizi iptal etmeniz önerilir. Aksi halde Apple/Google tarafında abonelik devam eder.</p>
+<h4>5.1. Veri Saklama Süreleri</h4>
+<ul>
+<li><strong>Cihazdaki finansal veriler:</strong> Kullanıcı silene veya uygulamayı cihazdan kaldırana kadar</li>
+<li><strong>Firebase Auth (e-posta, UID):</strong> Hesap silene kadar</li>
+<li><strong>RevenueCat abonelik metaverisi:</strong> Abonelik süresi + denetim için ek dönem (RC saklama politikası)</li>
+<li><strong>Firebase Crashlytics:</strong> ~90 gün (Firebase varsayılan)</li>
+<li><strong>Firebase Analytics:</strong> ~14 ay (Firebase varsayılan, ayardan kısaltılabilir)</li>
+<li><strong>AdMob reklam ID logları:</strong> ~60 gün (AdMob varsayılan)</li>
+<li><strong>Premium ödeme metaverisi:</strong> Vergi ve abonelik denetim yükümlülüğü gereği 10 yıl (Apple/Google tarafında)</li>
+</ul>
+<h3>6. Yedekleme (Premium Hizmet — Kullanıcı Kontrolünde)</h3>
+<p>Premium aktif kullanıcılar, Profil → &quot;Yedekleme&quot; menüsünden manuel olarak yedek dosyası oluşturabilirler.</p>
+<p><strong>Yedekleme akışı:</strong></p>
+<ol>
+<li>Kullanıcı yedek oluşturma butonuna basar</li>
+<li>Uygulama, kullanıcının belirlediği <strong>parola ile cihazda şifreler</strong> (AES-256-GCM şifreleme, PBKDF2 anahtar türetimi 100.000 iterasyon)</li>
+<li>Şifreli ZIP dosyası cihazın geçici belleğinde oluşur</li>
+<li>Cihazın <strong>&quot;Paylaş&quot; (Share Sheet)</strong> menüsü açılır; kullanıcı yedeği istediği yere gönderir: iCloud Drive, Google Drive, Dropbox, OneDrive, e-posta, mesajlaşma uygulaması vb.</li>
+<li>Dosya, kullanıcının seçtiği hizmete yüklenir</li>
+</ol>
+<p><strong>Veri Sorumlusu&#39;nun rolü:</strong> Yedek dosyalarının oluşturulması ve şifrelenmesi <strong>cihazınızda</strong> gerçekleşir. Yedek dosyasını paylaştığınız hizmet (iCloud Drive, Google Drive, Dropbox, e-posta, mesajlaşma vb.) tamamen sizin tercihinizdir ve <strong>bu hizmet sağlayıcılar kendi gizlilik politikalarına tabidir</strong>. <strong>Veri Sorumlusu, bu hizmetlerde tutulan yedek dosyalarınıza erişemez, içeriğini bilemez, kopyasını saklamaz ve bu dosyalardan kaynaklı işlemlerden sorumlu tutulamaz.</strong></p>
+<p><strong>Geri yükleme:</strong> Yeni cihaza geçişte veya veri kaybı durumunda kullanıcı, yedeği bulunduğu yerden cihazına indirir ve uygulama içinden &quot;Yedekten Geri Yükle&quot; menüsüyle parola girip restore eder.</p>
+<blockquote>
+<p><strong>⚠️ ÖNEMLİ — Yedek Parolası Sorumluluğu:</strong> Yedek şifreleme parolanız sunucumuza gönderilmez, tarafımızca bilinmez, saklanmaz ve <strong>hiçbir koşulda kurtarılamaz</strong>. Parolanın kaybedilmesi durumunda yedek dosyası açılamaz ve içeriği erişilemez hale gelir. <strong>Bu durumdan kaynaklanan veri kaybından Veri Sorumlusu sorumlu tutulamaz.</strong> Parolayı güvenli bir parola yöneticisinde (1Password, Bitwarden vb.) veya fiziksel olarak güvenli bir yerde saklamanız önerilir.</p>
+</blockquote>
+<h3>7. Veri Güvenliği Önlemleri (KVKK m.12)</h3>
+<ul>
+<li><strong>Yerel saklama:</strong> Cihaz üzerinde SQLite; hassas token&#39;lar iOS Keychain / Android EncryptedSharedPreferences ile korunur</li>
+<li><strong>Yedek şifreleme:</strong> AES-256-GCM + PBKDF2 (100.000 iterasyon) — kullanıcı parolası temelli, anahtar tarafımızda değildir</li>
+<li><strong>Aktarım güvenliği:</strong> Firebase / RevenueCat / Apple / Google çağrıları TLS 1.3 (HTTPS) üzerinden yapılır</li>
+<li><strong>Sunucu erişimi:</strong> Tarafımıza ait sunucu yoktur; üçüncü taraf servislerin (Firebase, RevenueCat) güvenlik standartları geçerlidir</li>
+<li><strong>Veri ihlali bildirimi:</strong> KVKK m.12/5 kapsamında, fark edilen veri ihlali 72 saat içinde Kurul&#39;a ve etkilenen veri sahiplerine bildirilir</li>
+</ul>
+<h3>8. Çocukların Verileri</h3>
+<p>Kartlarım 13 yaşın altındaki çocuklara yönelik değildir; bu yaş grubundan bilerek veri toplanmaz. Uygulama 18+ yetişkin kullanıcılara yönelik bir finansal araçtır.</p>
+<h3>9. Reklam Personalizasyonu</h3>
+<p>Free planda reklamlar gösterilir. Reklamların kişiselleştirilmesi için <strong>AdMob/UMP rıza ekranı</strong> üzerinden açık rızanız alınır. Rıza vermeseniz de uygulamayı kullanabilirsiniz; o durumda kişiselleştirilmemiş (contextual) reklam gösterilir. Premium plana geçtiğinizde reklam tamamen kapanır ve reklam ID&#39;si işlenmez.</p>
+<p>Reklam tercihinizi istediğiniz zaman Profil → &quot;Reklam Tercihlerini Sıfırla&quot; menüsünden değiştirebilirsiniz.</p>
+<h3>10. VERBİS Bilgisi</h3>
+<p>Veri Sorumlusu, KVKK Kurulu kararları uyarınca VERBİS (Veri Sorumluları Sicili) kayıt yükümlülüğü eşiklerinin (50+ çalışan veya 25 milyon TL+ yıllık mali bilanço) altında kaldığı için VERBİS kaydı zorunlu değildir. Eşik aşıldığında kayıt yapılacaktır.</p>
+<h3>11. Politikadaki Değişiklikler</h3>
+<p>Politikamızda değişiklik olması halinde bu sayfa güncellenir, &quot;Son güncelleme&quot; tarihi değiştirilir ve uygulama içi bildirim yapılır. Önemli değişikliklerde uygulama açılışta aydınlatma onayı yeniden istenir (versiyon kontrolü mekanizması).</p>
+
+<footer>Yayın: 26/05/2026 · Bu sayfa <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a> üzerinden yayınlanır. Kaynak: <code>pending</code>.</footer>
+</body>
+</html>

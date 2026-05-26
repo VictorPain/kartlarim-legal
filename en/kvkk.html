@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartlarim — Personal Data Notice</title>
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.6;background:var(--bg);color:var(--fg)}
+h1,h2,h3{line-height:1.3}
+h1{border-bottom:2px solid var(--accent);padding-bottom:8px}
+h2{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+h3{margin-top:24px}
+.meta{color:var(--muted);font-size:.9em;margin-bottom:24px}
+nav{margin:24px 0}
+nav a{display:inline-block;color:var(--accent);text-decoration:none;margin:8px 16px 8px 0;padding:8px 14px;border:1px solid var(--accent);border-radius:6px;font-size:.9em}
+nav a:hover{background:var(--accent);color:var(--bg)}
+nav a.lang{border-style:dashed}
+table{border-collapse:collapse;margin:16px 0;width:100%;font-size:.9em}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--warn);font-weight:600}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--warn);border-left:4px solid var(--warn-b);border-radius:4px}
+code{background:var(--border);padding:1px 6px;border-radius:3px;font-size:.9em}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85em}
+ul,ol{padding-left:20px}
+li{margin:4px 0}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav><a href="../index.html">⬅ Home</a><a href="privacy.html">Privacy</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">KVKK Notice</a><a href="terms.html">Terms of Service</a><a class="lang" href="../kvkk.html">🇹🇷 Türkçe</a></nav>
+<h1>Personal Data Notice (KVKK) — Kartlarim</h1>
+<hr>
+<h2>PERSONAL DATA NOTICE UNDER TURKISH DATA PROTECTION LAW (KVKK)</h2>
+<p><strong>Data Controller:</strong> Fatih Acı<br><strong>Contact:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Application:</strong> Kartlarim — Personal Finance Tracker<br><strong>Effective Date:</strong> 26 May 2026 (v2)</p>
+<p>This notice is prepared pursuant to Article 10 of the Turkish Personal Data Protection Law No. 6698 (&quot;KVKK&quot;).</p>
+<blockquote>
+<p><strong>Architecture Note:</strong> Kartlarim is a <strong>local-first</strong> application. Your financial data (cards, debts, payments, expenses) is stored <strong>only on your device</strong>; it is not stored on any server we operate. Backups go to a cloud service of your choice — we do not retain, view, or have access to them.</p>
+</blockquote>
+<h3>1. Personal Data Processed and Purposes of Processing</h3>
+<p>Under its new architecture, Kartlarim processes data at a <strong>minimal scale</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Purpose</th>
+<th>Where Stored</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google account email and name</td>
+<td>Identity verification (Google Sign-In)</td>
+<td>Google Firebase Auth (international)</td>
+</tr>
+<tr>
+<td>Firebase UID (anonymous user ID)</td>
+<td>Linking subscription to user</td>
+<td>Google Firebase + RevenueCat (international)</td>
+</tr>
+<tr>
+<td>Subscription status (premium / free)</td>
+<td>Premium feature gating</td>
+<td>RevenueCat (international)</td>
+</tr>
+<tr>
+<td>Anonymous crash reports (Crashlytics)</td>
+<td>Detecting and fixing app errors</td>
+<td>Google Firebase Crashlytics (international)</td>
+</tr>
+<tr>
+<td>Anonymous usage statistics (Analytics)</td>
+<td>Improving the application</td>
+<td>Google Firebase Analytics (international)</td>
+</tr>
+<tr>
+<td>Advertising ID (free plan only, anonymous)</td>
+<td>Ad display (with consent for personalization)</td>
+<td>Google AdMob / AppLovin (international)</td>
+</tr>
+<tr>
+<td>Device model, OS version</td>
+<td>Context for crash reports</td>
+<td>Firebase Crashlytics (international)</td>
+</tr>
+</tbody></table>
+<h4>1.1. Data NOT Processed by Us</h4>
+<p>The following data is <strong>never processed, stored, or viewed by us</strong>:</p>
+<ul>
+<li><strong>Your financial data</strong> — card limits, debts, payment history, fixed expenses, loans, deferrals: stored only in your device&#39;s local SQLite database</li>
+<li><strong>Your backup files</strong> — the encrypted ZIP files you create and upload to your own cloud (Section 6)</li>
+<li><strong>Bank passwords, bank API access credentials</strong></li>
+<li><strong>Full credit card number</strong> (only the last 4 digits as an optional visual label)</li>
+<li><strong>CVC or card security code</strong></li>
+<li><strong>Bank payment / transfer authorization information</strong></li>
+<li><strong>Location data</strong></li>
+<li><strong>Contacts, photos, files, media, microphone</strong> (except for Smart Scan — which runs instantly on user trigger and does not save images)</li>
+</ul>
+<blockquote>
+<p><strong>Snap-Sync Philosophy:</strong> Kartlarim does not connect directly to any bank. The user manually enters numbers from their bank app (snapshot). Therefore, Open Banking regulations are not triggered for our application. <strong>We don&#39;t connect to your bank, and we don&#39;t keep your financial data on our servers.</strong></p>
+</blockquote>
+<h3>2. Recipients of Personal Data (Including International Transfers)</h3>
+<p>The following service providers&#39; servers are located internationally (USA/EU); some data is transferred internationally under KVKK Article 9. All transfers are made with the relevant company&#39;s Data Processing Agreement (DPA) and/or Standard Contractual Clauses (SCC).</p>
+<table>
+<thead>
+<tr>
+<th>Service Provider</th>
+<th>Data Transferred</th>
+<th>Server</th>
+<th>Legal Safeguard</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google LLC (Firebase Auth)</td>
+<td>Email, UID</td>
+<td>USA/EU</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>Google LLC (Crashlytics)</td>
+<td>Anonymous crash report, device/OS info</td>
+<td>USA/EU</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>Google LLC (Analytics)</td>
+<td>Anonymous usage statistics</td>
+<td>USA/EU</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>Google LLC (AdMob)</td>
+<td>Anonymous ad ID, ad performance</td>
+<td>USA/EU</td>
+<td>Google DPA + SCC</td>
+</tr>
+<tr>
+<td>AppLovin Corp. (MAX mediation)</td>
+<td>Anonymous ad ID</td>
+<td>USA</td>
+<td>AppLovin DPA</td>
+</tr>
+<tr>
+<td>RevenueCat Inc.</td>
+<td>appUserId, subscription status, purchase date</td>
+<td>USA</td>
+<td>RevenueCat DPA + SCC</td>
+</tr>
+<tr>
+<td>Apple Inc. (App Store)</td>
+<td>Subscription metadata, purchase record</td>
+<td>USA/Ireland</td>
+<td>Apple DPA</td>
+</tr>
+<tr>
+<td>Google LLC (Play Store)</td>
+<td>Subscription metadata, purchase record</td>
+<td>USA/EU</td>
+<td>Google DPA</td>
+</tr>
+</tbody></table>
+<p><strong>Personal data is not shared with third parties for commercial purposes and is not sold.</strong></p>
+<p><strong>We do not operate any server of our own.</strong> The architecture is finalized as local-first; the previous &quot;Türkiye Cloud Sync&quot; plan has not been deployed.</p>
+<h3>3. Method of Collection and Legal Basis</h3>
+<p>Personal data is collected through: in-app Google Sign-In, automatic system records (Firebase), and the premium subscription flow (RevenueCat → Apple/Google Store).</p>
+<p><strong>Legal Basis:</strong></p>
+<ul>
+<li><strong>KVKK Art. 5/2-c (necessary for the conclusion or performance of a contract):</strong> Identity verification (Firebase Auth), premium subscription (RevenueCat / Apple / Google Play).</li>
+<li><strong>KVKK Art. 5/2-f (legitimate interest):</strong> Error tracking (Crashlytics), usage analytics (Analytics) — processing that does not harm the fundamental rights of the user, aimed at improving app quality.</li>
+<li><strong>KVKK Art. 5/1 (explicit consent):</strong> Ad personalization (AdMob UMP consent screen). If you do not consent, you can still use the app; non-personalized ads will be shown.</li>
+</ul>
+<h3>4. Your Rights as a Data Subject (KVKK Article 11)</h3>
+<p>Under Article 11 of KVKK, you have the right to:</p>
+<ul>
+<li>Learn whether your personal data is being processed</li>
+<li>Request information about the processing</li>
+<li>Learn the purpose of processing and whether it is being used appropriately</li>
+<li>Know the third parties to whom data has been transferred (domestic or international)</li>
+<li>Request correction, deletion, or destruction of the data</li>
+<li>Request that correction/deletion be communicated to recipients of the data</li>
+<li>Object to decisions made through automated analysis that adversely affect you</li>
+<li>Claim compensation for damage arising from unlawful processing</li>
+</ul>
+<p><strong>In-app self-service methods:</strong></p>
+<ul>
+<li><strong>Correction / access:</strong> Since your financial data is stored on your device, you can edit and view it within the app at any time.</li>
+<li><strong>Data download (KVKK Art. 11):</strong> From Profile → &quot;Download My Data (KVKK)&quot; you can download all data on your device in JSON format. This service is available to both free and premium members.</li>
+<li><strong>Deletion (KVKK Art. 7):</strong> From Profile → &quot;Delete Account&quot; you can permanently delete your account and data (see Section 5).</li>
+</ul>
+<p><strong>Email application:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a>. Applications are answered free of charge <strong>within 30 days</strong> in accordance with the Data Controller Application Notification.</p>
+<h3>5. Account Deletion and Data Destruction</h3>
+<p>From <strong>Profile → &quot;Delete Account&quot;</strong> you can delete your account instantly. <strong>This action cannot be undone.</strong> When confirmed:</p>
+<ul>
+<li>All financial data on your device (cards, debts, payments, expenses) is permanently deleted</li>
+<li>Your Firebase identity record (email, UID) is deleted</li>
+<li>Your RevenueCat subscription record (anonymized) is terminated</li>
+<li>Crashlytics / Analytics anonymous data is auto-deleted at the end of those services&#39; retention period (~60-90 days)</li>
+</ul>
+<p><strong>No 30-day waiting period applies; data is permanently destroyed.</strong> To prevent accidental deletion, the app requires a double &quot;ARE YOU SURE?&quot; confirmation.</p>
+<p><strong>If you have an active premium subscription:</strong> Cancel your subscription from your App Store / Google Play account settings before deleting the account. Otherwise the subscription will continue on Apple/Google&#39;s side.</p>
+<h4>5.1. Data Retention Periods</h4>
+<ul>
+<li><strong>Device-side financial data:</strong> Until the user deletes it or removes the app from the device</li>
+<li><strong>Firebase Auth (email, UID):</strong> Until account deletion</li>
+<li><strong>RevenueCat subscription metadata:</strong> Subscription period + audit period (per RC retention policy)</li>
+<li><strong>Firebase Crashlytics:</strong> ~90 days (Firebase default)</li>
+<li><strong>Firebase Analytics:</strong> ~14 months (Firebase default, can be shortened from settings)</li>
+<li><strong>AdMob ad ID logs:</strong> ~60 days (AdMob default)</li>
+<li><strong>Premium payment metadata:</strong> 10 years (per tax and subscription audit obligation, on Apple/Google&#39;s side)</li>
+</ul>
+<h3>6. Backup (Premium Service — User-Controlled)</h3>
+<p>Premium active users can manually create backup files from Profile → &quot;Backup&quot;.</p>
+<p><strong>Backup flow:</strong></p>
+<ol>
+<li>User taps the backup creation button</li>
+<li>The app encrypts on the device using the <strong>passphrase you set</strong> (AES-256-GCM, PBKDF2 key derivation with 100,000 iterations)</li>
+<li>The encrypted ZIP file is created in the device&#39;s temporary cache</li>
+<li>The device&#39;s <strong>&quot;Share Sheet&quot;</strong> opens; you send the backup wherever you choose: iCloud Drive, Google Drive, Dropbox, OneDrive, email, messaging app, etc.</li>
+<li>The file is uploaded to the service you chose</li>
+</ol>
+<p><strong>The Data Controller&#39;s role:</strong> Creation and encryption of backup files happen <strong>on your device</strong>. The service you share the backup with (iCloud Drive, Google Drive, Dropbox, email, messaging, etc.) is entirely your choice and <strong>those providers are subject to their own privacy policies</strong>. <strong>The Data Controller cannot access, view, copy, or take responsibility for the backup files stored in those services.</strong></p>
+<p><strong>Restore:</strong> When moving to a new device or in case of data loss, the user downloads the backup from wherever it is stored and restores it through the in-app &quot;Restore from Backup&quot; menu by entering the passphrase.</p>
+<blockquote>
+<p><strong>⚠️ IMPORTANT — Backup Passphrase Responsibility:</strong> Your backup encryption passphrase is <strong>not transmitted to our servers, not known by us, not stored by us, and cannot be recovered under any circumstances</strong>. If the passphrase is lost, the backup file cannot be opened and its contents become inaccessible. <strong>The Data Controller cannot be held responsible for data loss arising from this situation.</strong> We recommend storing the passphrase in a secure password manager (1Password, Bitwarden, etc.) or in a physically secure location.</p>
+</blockquote>
+<h3>7. Data Security Measures (KVKK Art. 12)</h3>
+<ul>
+<li><strong>Local storage:</strong> SQLite on device; sensitive tokens protected with iOS Keychain / Android EncryptedSharedPreferences</li>
+<li><strong>Backup encryption:</strong> AES-256-GCM + PBKDF2 (100,000 iterations) — based on user passphrase; the key is not on our side</li>
+<li><strong>Transit security:</strong> Firebase / RevenueCat / Apple / Google calls go over TLS 1.3 (HTTPS)</li>
+<li><strong>Server access:</strong> We do not operate any server; the security standards of third-party services (Firebase, RevenueCat) apply</li>
+<li><strong>Data breach notification:</strong> Per KVKK Art. 12/5, a discovered data breach is reported to the Authority and affected data subjects within 72 hours</li>
+</ul>
+<h3>8. Children&#39;s Data</h3>
+<p>Kartlarim is not directed at children under 13; data is not knowingly collected from this age group. The application is a financial tool for adult users aged 18+.</p>
+<h3>9. Ad Personalization</h3>
+<p>Ads are shown on the free plan. Explicit consent is obtained through the <strong>AdMob/UMP consent screen</strong> for ad personalization. If you do not consent, you can still use the app; non-personalized (contextual) ads will be shown. When you switch to the premium plan, ads are turned off entirely and the ad ID is not processed.</p>
+<p>You can change your ad preference at any time from Profile → &quot;Reset Ad Preferences&quot;.</p>
+<h3>10. VERBİS Notice</h3>
+<p>The Data Controller is not required to register with VERBİS (Data Controllers Registry) because they fall below the thresholds set by the KVKK Authority (50+ employees or annual balance sheet of 25 million TL+). Registration will be made when the threshold is exceeded.</p>
+<h3>11. Changes to This Policy</h3>
+<p>If the policy changes, this page is updated, the &quot;Last Updated&quot; date is changed, and in-app notification is given. For significant changes, the in-app data notice consent is requested again at launch (versioning mechanism).</p>
+
+<footer>Published: 05/26/2026 · This page is published from <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a>. Source: <code>pending</code>.</footer>
+</body>
+</html>

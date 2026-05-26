@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartlarım — Kullanıcı Sözleşmesi</title>
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.6;background:var(--bg);color:var(--fg)}
+h1,h2,h3{line-height:1.3}
+h1{border-bottom:2px solid var(--accent);padding-bottom:8px}
+h2{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+h3{margin-top:24px}
+.meta{color:var(--muted);font-size:.9em;margin-bottom:24px}
+nav{margin:24px 0}
+nav a{display:inline-block;color:var(--accent);text-decoration:none;margin:8px 16px 8px 0;padding:8px 14px;border:1px solid var(--accent);border-radius:6px;font-size:.9em}
+nav a:hover{background:var(--accent);color:var(--bg)}
+nav a.lang{border-style:dashed}
+table{border-collapse:collapse;margin:16px 0;width:100%;font-size:.9em}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--warn);font-weight:600}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--warn);border-left:4px solid var(--warn-b);border-radius:4px}
+code{background:var(--border);padding:1px 6px;border-radius:3px;font-size:.9em}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85em}
+ul,ol{padding-left:20px}
+li{margin:4px 0}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav><a href="index.html">⬅ Ana sayfa</a><a href="privacy.html">Gizlilik</a><a href="kvkk.html">KVKK Aydınlatma</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">Kullanıcı Sözleşmesi</a><a class="lang" href="en/terms.html">🇬🇧 English</a></nav>
+<h1>Kullanıcı Sözleşmesi — Kartlarım</h1>
+<blockquote>
+<p><strong>v2 — local-first mimari (2026-05-26):</strong> Yedek parolası sorumluluğu eklendi (m.5.2). Cloud Sync ve 30 gün yedek tutma cümleleri kaldırıldı.</p>
+</blockquote>
+<hr>
+<p><strong>Geliştirici:</strong> Fatih Acı<br><strong>İletişim:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Yürürlük Tarihi:</strong> 26 Mayıs 2026 (v2)</p>
+<p>Kartlarım uygulamasını (&quot;Uygulama&quot;) kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız.</p>
+<h3>Madde 1 — Hizmet Tanımı</h3>
+<p>Kartlarım; bireysel kullanıcıların kredi kartı, kredi ve sabit gider bilgilerini hızlı şekilde takip edebilmesi amacıyla geliştirilmiş bir mobil uygulamadır. Kullanıcı banka uygulamasındaki rakamları manuel olarak girer (&quot;Snapshot&quot; / &quot;Snap-Sync&quot; felsefesi); uygulama bankaya doğrudan erişmez, banka şifresi veya API erişimi talep etmez.</p>
+<p>Kartlarım <strong>local-first</strong> bir uygulamadır: finansal verileriniz yalnızca cihazınızda tutulur, tarafımıza ait herhangi bir sunucuda saklanmaz.</p>
+<p>Kartlarım <strong>muhasebe yazılımı, mali müşavirlik hizmeti, banka aracılık hizmeti, finansal danışmanlık ya da resmi kayıt sistemi DEĞİLDİR.</strong></p>
+<h3>Madde 2 — Abonelik ve Ödeme</h3>
+<ul>
+<li>Kartlarım&#39;ın temel finansal takip özellikleri ücretsizdir; reklam gösterimi içerir.</li>
+<li>Premium plan: <strong>Aylık 39,99 TL veya Yıllık 299 TL</strong>. Yıllık plan için 7 günlük ücretsiz deneme süresi sunulur.</li>
+<li>Deneme süresi sonunda iptal edilmemişse abonelik otomatik olarak ücretli döneme geçer.</li>
+<li>Ücretler Google Play veya App Store tarafından tahsil edilir. Abonelik yönetimi RevenueCat altyapısı üzerinden yapılır.</li>
+<li>İptal işlemi Google Play / App Store hesap ayarlarından yapılabilir.</li>
+<li>Geçmiş abonelik ücretleri iade edilmez; ilgili mağazanın iade politikası geçerlidir.</li>
+<li>Premium iptal edildiğinde yedekleme özelliği devre dışı kalır; ancak <strong>daha önce oluşturduğunuz yedek dosyalarınız sizde kalır</strong> (cihazınızda veya kendi seçtiğiniz bulutta).</li>
+</ul>
+<h3>Madde 3 — Kullanıcı Verileri ve Gizlilik</h3>
+<p>Gizlilik uygulamalarımız için lütfen Gizlilik Politikası ve KVKK Aydınlatma Metni&#39;ni inceleyin.</p>
+<p><strong>Local-first yedekleme:</strong> Premium plan kapsamındaki yedekleme özelliği, verilerinizin <strong>cihazınızda şifreli bir dosya olarak üretilip kendi tercih ettiğiniz bulut hizmetine (iCloud, Google Drive, Dropbox vb.) gönderilmesi</strong> esasına dayanır. Yedek dosyalarınız tarafımıza ait sunucuda tutulmaz; içeriği tarafımızca görüntülenemez. Yedeğin yüklendiği hizmet sağlayıcının gizlilik politikası geçerlidir.</p>
+<h3>Madde 4 — Kullanıcının Yükümlülükleri</h3>
+<p>Kullanıcı:</p>
+<ul>
+<li>Uygulamayı yalnızca yasal amaçlarla kullanmayı,</li>
+<li>Üçüncü kişilerin verilerini rızasız girmemeyi,</li>
+<li>Uygulamadaki tahmini hesaplamaları kendi finansal kararlarının <strong>tek dayanağı</strong> olarak kullanmamayı,</li>
+<li>Yedek dosyalarının ve yedek parolalarının güvenli saklanmasından <strong>bizzat sorumlu</strong> olmayı,</li>
+<li>Türkiye&#39;de geçerli vergi mevzuatına ve borç yükümlülüklerine bizzat uymayı kabul eder.</li>
+</ul>
+<h3>Madde 5 — Sorumluluk Reddi (YAKLAŞIK HESAPLAMA + YEDEK PAROLASI)</h3>
+<blockquote>
+<p><strong>Bu madde sizi korur. Lütfen dikkatlice okuyun.</strong></p>
+</blockquote>
+<h4>5.1. Yaklaşık Hesaplama</h4>
+<p>Kartlarım uygulamasında gösterilen tüm finansal hesaplamalar — <strong>asgari ödeme tutarı, dönem borcu tahmini, faiz, kalan borç, taksit projeksiyonu, gelecek ekstre beklentisi, bütçe sağlığı, borç bitiş tahmini ve benzeri tüm değerler</strong> — tahmini ve bilgi amaçlıdır ve aşağıdaki nitelikleri taşımaz:</p>
+<ul>
+<li>Mali müşavirlik veya muhasebe hizmeti</li>
+<li>Hukuki tavsiye</li>
+<li>Banka tarafından üretilmiş resmi ekstre veya borç beyanı</li>
+<li>Kesin finansal veri</li>
+</ul>
+<p>Banka asgari ödeme tutarları yasal mevzuat (BDDK, TCMB) çerçevesinde uygulanır; Kartlarım&#39;ın hesabı TR yasal modeli izlese de, <strong>gerçek asgari ödeme yalnızca bankanız tarafından belirlenir.</strong> Karar verirken bankanızın size gönderdiği ekstreyi esas alın.</p>
+<p><strong>Kullanıcı, uygulama verilerini resmi ödeme planı, banka başvurusu, hukuki süreç veya vergi beyannamesi için tek dayanak olarak kullanmamayı kabul eder.</strong></p>
+<h4>5.2. Yedek Parolası Sorumluluğu</h4>
+<p>Premium yedekleme özelliği kullanıldığında yedek dosyaları, <strong>kullanıcı tarafından belirlenen parola ile cihazda şifrelenir</strong> (AES-256-GCM şifreleme, PBKDF2 anahtar türetimi 100.000 iterasyon). Bu parola sunucumuza gönderilmez, tarafımızca bilinmez, saklanmaz ve <strong>hiçbir koşulda kurtarılamaz</strong>. <strong>Parolanın kaybedilmesi durumunda yedek dosyası açılamaz ve içeriği erişilemez hale gelir. Bu durumdan kaynaklanan veri kaybından Veri Sorumlusu / Geliştirici hiçbir koşulda sorumlu tutulamaz.</strong></p>
+<p>Yedek oluşturma akışında parolanın güvenli bir yerde saklanması konusunda kullanıcıya açık uyarı yapılır ve bu uyarının okunup anlaşıldığı kullanıcı tarafından onaylanır.</p>
+<h4>5.3. Genel Sorumluluk Reddi</h4>
+<p>Geliştirici; hesaplama hatası, bildirim gecikmesi, veri kaybı, asgari ödeme tahmininin gerçek banka değerinden farklı çıkması, yedek dosyasının kaybedilmesi veya açılamaması, yedek parolasının unutulması, üçüncü taraf bulut hizmetlerinden (iCloud, Google Drive vb.) kaynaklı kesinti veya veri kaybı, uygulamanın kullanımından doğan dolaylı ya da doğrudan zararlardan sorumlu tutulamaz.</p>
+<h3>Madde 6 — Reklamlar</h3>
+<p>Free planda reklam gösterimi vardır. Reklam personalizasyonu için ayrı consent (UMP) ekranı üzerinden açık rıza alınır; rıza vermeseniz de uygulamayı kullanabilirsiniz. Premium aboneliği aktif olduğunda reklam tamamen kapanır.</p>
+<p>Reklam tercihinizi istediğiniz zaman Profil → &quot;Reklam Tercihlerini Sıfırla&quot; menüsünden değiştirebilirsiniz.</p>
+<h3>Madde 7 — Hizmetin Değiştirilmesi veya Sonlandırılması</h3>
+<p>Geliştirici, önceden bildirim yapmak kaydıyla uygulamanın özelliklerini değiştirme veya hizmeti sonlandırma hakkını saklı tutar. Aktif premium abonelik süresi içinde hizmet sonlandırılırsa kalan süre için ücret iadesi yapılır. <strong>Yedek dosyalarınız zaten cihazınızda / kendi bulutunuzda olduğundan, hizmet sonlanması yedek erişiminizi engellemez.</strong></p>
+<h3>Madde 8 — Hesap Silme</h3>
+<p>Profil → &quot;Hesabı Sil&quot; menüsünden hesabınızı anında silebilirsiniz. <strong>Bu işlem geri alınamaz.</strong> Silme akışı KVKK Aydınlatma Metni&#39;nin 5. maddesinde detaylandırılmıştır.</p>
+<h3>Madde 9 — Uygulanacak Hukuk</h3>
+<p>Bu sözleşme Türkiye Cumhuriyeti hukukuna tabidir. Uyuşmazlıklarda İstanbul mahkemeleri ve icra daireleri yetkilidir.</p>
+<h3>Madde 10 — İletişim</h3>
+<p><a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a></p>
+
+<footer>Yayın: 26/05/2026 · Bu sayfa <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a> üzerinden yayınlanır. Kaynak: <code>pending</code>.</footer>
+</body>
+</html>

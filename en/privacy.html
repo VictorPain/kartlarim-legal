@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartlarim — Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.6;background:var(--bg);color:var(--fg)}
+h1,h2,h3{line-height:1.3}
+h1{border-bottom:2px solid var(--accent);padding-bottom:8px}
+h2{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+h3{margin-top:24px}
+.meta{color:var(--muted);font-size:.9em;margin-bottom:24px}
+nav{margin:24px 0}
+nav a{display:inline-block;color:var(--accent);text-decoration:none;margin:8px 16px 8px 0;padding:8px 14px;border:1px solid var(--accent);border-radius:6px;font-size:.9em}
+nav a:hover{background:var(--accent);color:var(--bg)}
+nav a.lang{border-style:dashed}
+table{border-collapse:collapse;margin:16px 0;width:100%;font-size:.9em}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--warn);font-weight:600}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--warn);border-left:4px solid var(--warn-b);border-radius:4px}
+code{background:var(--border);padding:1px 6px;border-radius:3px;font-size:.9em}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85em}
+ul,ol{padding-left:20px}
+li{margin:4px 0}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav><a href="../index.html">⬅ Home</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">Privacy</a><a href="kvkk.html">KVKK Notice</a><a href="terms.html">Terms of Service</a><a class="lang" href="../privacy.html">🇹🇷 Türkçe</a></nav>
+<h1>Privacy Policy — Kartlarim</h1>
+<hr>
+<p><strong>Developer:</strong> Fatih Acı<br><strong>Contact:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Effective Date:</strong> 26 May 2026 (v2)</p>
+<p>This Privacy Policy explains the information collected when you use the Kartlarim mobile application (&quot;App&quot;).</p>
+<blockquote>
+<p><strong>Local-first architecture:</strong> Your financial data (cards, debts, payments, expenses) is stored <strong>only on your device</strong>; it is not stored on any server we operate. If you create a backup, the file goes to a cloud of your choice (iCloud, Drive, etc.) — we do not retain it.</p>
+</blockquote>
+<h3>1. Information We Collect</h3>
+<p><strong>Google Sign-In (Firebase Auth):</strong> When you sign in with your Google account, Google shares your name and email address. This information is used only for identity verification.</p>
+<p><strong>Financial Data You Enter in the App:</strong> Kartlarim stores data such as card limit / available limit / debt, loan amount / installment, fixed expense, income, deferral and payment history. <strong>This data is stored only in your device&#39;s local SQLite database — it is not stored on or sent to any server we operate.</strong></p>
+<blockquote>
+<p><strong>Snap-Sync Philosophy:</strong> Kartlarim does not connect directly to any bank; bank passwords, card numbers, CVC, or open banking API access are NEVER requested. The user manually enters values like &quot;available limit&quot; from their bank app. <strong>We don&#39;t connect to your bank, and we don&#39;t keep your financial data on our servers.</strong></p>
+</blockquote>
+<p><strong>Subscription Information (RevenueCat):</strong> Your premium subscription status is held by RevenueCat. Only your Firebase UID (anonymous user ID) and subscription status are sent to RevenueCat; name, email, and financial data are not sent.</p>
+<p><strong>Technical Data (Firebase Crashlytics + Analytics):</strong> Anonymous crash reports and usage statistics are collected via Google Firebase to improve app stability.</p>
+<p><strong>Ad Data (AdMob + AppLovin):</strong> AdMob infrastructure (including AppLovin mediation) is used for ad display on the free plan. Your device&#39;s anonymous ad ID is sent to these services; with consent, personalized ads are shown, otherwise non-personalized ads. When premium is active, ads are turned off entirely and the ad ID is not processed.</p>
+<p><strong>Premium Payment Information:</strong> Premium subscription payments go through Google Play or App Store infrastructure. <strong>Your payment card or bank information is not transmitted to us.</strong></p>
+<h3>2. Information We Don&#39;t Collect</h3>
+<ul>
+<li>Bank password / API access</li>
+<li>Full card number (only the last 4 digits as an optional visual label)</li>
+<li>CVC or card security code</li>
+<li>Location data</li>
+<li>Microphone / camera (except Smart Scan — runs only on user trigger and does not save images)</li>
+<li>Contacts access</li>
+<li>Files and media on your device</li>
+<li><strong>Copy of financial data</strong> (stays on your device — not on our side)</li>
+<li><strong>Backup files</strong> (with you and in the cloud you choose — not on our side)</li>
+</ul>
+<h3>3. Purpose of Information Use</h3>
+<ul>
+<li>To perform the app&#39;s core financial tracking function</li>
+<li>To verify premium subscription status and to gate premium features</li>
+<li>To detect technical errors and improve the app</li>
+<li>To show ads (on free plan, with consent for personalization)</li>
+</ul>
+<h3>4. Sharing with Third Parties (Including International Transfer)</h3>
+<p>The following service providers&#39; servers are located internationally (USA/EU). Some of your data is transferred to these providers as mandatory infrastructure to operate the app (under KVKK Art. 9 with DPA/SCC safeguards):</p>
+<table>
+<thead>
+<tr>
+<th>Party</th>
+<th>Purpose</th>
+<th>Server Location</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google LLC (Firebase Auth)</td>
+<td>Identity verification</td>
+<td>USA / EU</td>
+</tr>
+<tr>
+<td>Google LLC (Firebase Crashlytics)</td>
+<td>Crash tracking</td>
+<td>USA / EU</td>
+</tr>
+<tr>
+<td>Google LLC (Firebase Analytics)</td>
+<td>Anonymous usage analytics</td>
+<td>USA / EU</td>
+</tr>
+<tr>
+<td>Google LLC (AdMob)</td>
+<td>Ad serving</td>
+<td>USA / EU</td>
+</tr>
+<tr>
+<td>AppLovin Corp. (MAX mediation)</td>
+<td>Ad mediation</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>RevenueCat Inc.</td>
+<td>Subscription management and validation</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>Apple Inc. (App Store)</td>
+<td>Payment and subscription management</td>
+<td>USA / Ireland</td>
+</tr>
+<tr>
+<td>Google LLC (Play Store)</td>
+<td>Payment and subscription management</td>
+<td>USA / EU</td>
+</tr>
+</tbody></table>
+<p><strong>We do not operate any server of our own.</strong> Your financial data stays on your device; your backup files go to the cloud service of your choice.</p>
+<p>Your personal data <strong>is not shared with third parties for commercial purposes and is not sold.</strong></p>
+<h3>5. Data Security</h3>
+<ul>
+<li><strong>On device:</strong> SQLite + iOS Keychain / Android EncryptedSharedPreferences token protection</li>
+<li><strong>Backup encryption:</strong> AES-256-GCM with user passphrase (PBKDF2, 100,000 iterations) — passphrase is not on our side</li>
+<li><strong>In transit:</strong> TLS 1.3 (HTTPS) — Firebase, RevenueCat, Apple, Google calls</li>
+<li><strong>Data breach notification:</strong> Per KVKK Art. 12/5, within 72 hours to the Authority and affected data subjects</li>
+</ul>
+<h3>6. Backup (Premium)</h3>
+<p>Premium active users can create backup files from Profile → &quot;Backup&quot;. The backup is created <strong>on your device</strong>, encrypted with <strong>your chosen passphrase</strong> (AES-256-GCM), then the device&#39;s Share Sheet opens; you send the backup to the service of your choice (iCloud Drive, Google Drive, email, etc.).</p>
+<p><strong>We do not retain, view, or have access to your backup files.</strong> The privacy policy of the service you share to (Apple, Google, Dropbox, etc.) applies.</p>
+<blockquote>
+<p><strong>⚠️ Backup passphrase:</strong> The passphrase is not transmitted to our servers and cannot be recovered. If you lose the passphrase, the backup file cannot be opened. Store your passphrase in a secure place.</p>
+</blockquote>
+<h3>7. Children&#39;s Privacy</h3>
+<p>Kartlarim is not directed at children under 13. The application is a financial tool for adult users aged 18+.</p>
+<h3>8. Deleting Your Data</h3>
+<ul>
+<li><strong>Removing the app from your device:</strong> All locally stored financial data is permanently deleted.</li>
+<li><strong>Account deletion (Profile → &quot;Delete Account&quot;):</strong> Instantly and permanently deleted — all financial data on your device + Firebase identity record + RevenueCat subscription record. <strong>No 30-day waiting period; cannot be undone.</strong></li>
+<li><strong>Download my data (KVKK Art. 11):</strong> From Profile → &quot;Download My Data (KVKK)&quot; you can take your device data in JSON format. Free and premium users.</li>
+<li><strong>Email application:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a> — answered within 30 days.</li>
+</ul>
+<h3>9. Changes to This Policy</h3>
+<p>If the policy changes, this page is updated and the &quot;Last Updated&quot; date is changed. For significant changes, the in-app data notice consent is requested again (versioning mechanism).</p>
+<h3>10. Contact</h3>
+<p>For questions about this privacy policy: <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a></p>
+<h3>11. KVKK Rights (Turkish Users)</h3>
+<p>For Turkish users, see the detailed KVKK Personal Data Notice.</p>
+
+<footer>Published: 05/26/2026 · This page is published from <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a>. Source: <code>pending</code>.</footer>
+</body>
+</html>
