@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartlarım — Hesap ve Veri Silme</title>
+<style>
+:root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.6;background:var(--bg);color:var(--fg)}
+h1,h2,h3{line-height:1.3}
+h1{border-bottom:2px solid var(--accent);padding-bottom:8px}
+h2{margin-top:32px;border-top:1px solid var(--border);padding-top:24px}
+h3{margin-top:24px}
+.meta{color:var(--muted);font-size:.9em;margin-bottom:24px}
+nav{margin:24px 0}
+nav a{display:inline-block;color:var(--accent);text-decoration:none;margin:8px 16px 8px 0;padding:8px 14px;border:1px solid var(--accent);border-radius:6px;font-size:.9em}
+nav a:hover{background:var(--accent);color:var(--bg)}
+nav a.lang{border-style:dashed}
+table{border-collapse:collapse;margin:16px 0;width:100%;font-size:.9em}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--warn);font-weight:600}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--warn);border-left:4px solid var(--warn-b);border-radius:4px}
+code{background:var(--border);padding:1px 6px;border-radius:3px;font-size:.9em}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85em}
+ul,ol{padding-left:20px}
+li{margin:4px 0}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav><a href="index.html">⬅ Ana sayfa</a><a href="privacy.html">Gizlilik</a><a href="kvkk.html">KVKK Aydınlatma</a><a href="terms.html">Kullanıcı Sözleşmesi</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">Hesap Silme</a><a class="lang" href="en/hesap-silme.html">🇬🇧 English</a></nav>
+<h1>Hesap ve Veri Silme — Kartlarım</h1>
+<p><strong>Uygulama:</strong> Kartlarım — Kişisel Finansal Takip Asistanı
+<strong>Paket adı:</strong> <code>com.fatihaci.kartlarim.app</code>
+<strong>Geliştirici:</strong> Fatih Acı — <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a></p>
+<p>Bu sayfa, Google Play&#39;in veri silme politikası gereği, hesabınızı ve
+verilerinizi <strong>uygulamayı açmadan da</strong> silebilmeniz için hazırlanmıştır.</p>
+<h2>Yol 1 — Uygulama içinden (anında)</h2>
+<ol>
+<li>Kartlarım&#39;ı açın</li>
+<li><strong>Profil</strong> sekmesine gidin</li>
+<li><strong>&quot;Hesabı Sil&quot;</strong> seçeneğine dokunun</li>
+<li>İki onay ekranını da onaylayın</li>
+</ol>
+<p>Bu işlem <strong>anında ve geri alınamaz</strong> biçimde şunları siler:</p>
+<ul>
+<li>Cihazınızdaki tüm finansal verileriniz — kartlar, borçlar, krediler, gelirler, sabit giderler, ödeme geçmişi, ertelemeler</li>
+<li>Kimlik kaydınız (e-posta, ad, kullanıcı kimliği) — Google Firebase Authentication tarafında</li>
+</ul>
+<p>Bekleme süresi uygulanmaz.</p>
+<h2>Yol 2 — E-posta ile talep</h2>
+<p>Uygulamayı kuramıyor ya da açamıyorsanız, silme talebinizi
+<strong><a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a></strong> adresine gönderin. E-postada hesabınızı
+tanımlayan adresi (uygulamaya kayıt olduğunuz e-posta) belirtmeniz yeterlidir.</p>
+<p>Talebiniz <strong>30 gün içinde ücretsiz</strong> olarak sonuçlandırılır ve sonuç size
+aynı adresten bildirilir.</p>
+<h2>Silinmeyenler ve süreler</h2>
+<table>
+<thead>
+<tr>
+<th>Veri</th>
+<th>Ne olur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cihazdaki finansal verileriniz</td>
+<td>Anında ve kalıcı silinir</td>
+</tr>
+<tr>
+<td>Kimlik kaydı (e-posta, ad, kullanıcı kimliği)</td>
+<td>Anında ve kalıcı silinir</td>
+</tr>
+<tr>
+<td>Kendi bulutunuza gönderdiğiniz yedek dosyaları</td>
+<td><strong>Silinmez</strong> — bu dosyalar sizin kontrolünüzdedir, bizde kopyası yoktur; ilgili hizmetten (iCloud, Drive vb.) kendiniz silmelisiniz</td>
+</tr>
+<tr>
+<td>Reklam kimliği kayıtları (AdMob)</td>
+<td>Google&#39;ın saklama politikası gereği ~60 gün içinde otomatik silinir</td>
+</tr>
+<tr>
+<td>Ödeme ve abonelik kaydı (Apple / Google)</td>
+<td>Vergi ve denetim yükümlülüğü gereği ilgili mağazada 10 yıl tutulur; bu kayıtlar bizde değildir</td>
+</tr>
+</tbody></table>
+<h2>Aboneliğiniz varsa — önce iptal edin</h2>
+<p><strong>Hesabı silmek aboneliği sonlandırmaz.</strong> Premium aboneliğiniz Apple veya
+Google Play tarafında tanımlıdır; tahsilatın durması için aboneliği
+<strong>mağaza hesabınızın ayarlarından ayrıca iptal etmeniz</strong> gerekir. Bu iptali
+sizin adınıza yapamayız.</p>
+<ul>
+<li><strong>iPhone / iPad:</strong> Ayarlar → Apple Kimliğiniz → Abonelikler</li>
+<li><strong>Android:</strong> Google Play → Profil → Ödemeler ve abonelikler → Abonelikler</li>
+</ul>
+<h2>Daha fazlası</h2>
+<p>Verilerinizin nasıl işlendiği ve KVKK m.11 haklarınız için
+<a href="kvkk.html">KVKK Aydınlatma Metni</a> ve <a href="privacy.html">Gizlilik Politikası</a>
+sayfalarına bakabilirsiniz.</p>
+
+<footer>Yayın: 26/05/2026 · Bu sayfa <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a> üzerinden yayınlanır. Kaynak: <code>9e50384</code>.</footer>
+</body>
+</html>

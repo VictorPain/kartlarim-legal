@@ -21,6 +21,9 @@ const PAGES = [
   { tip: 'privacy', dil: 'en', src: 'privacy-policy-en.md',         title: 'Kartlarim — Privacy Policy',        out: 'en/privacy.html' },
   { tip: 'kvkk',    dil: 'en', src: 'kvkk-aydinlatma-metni-en.md',  title: 'Kartlarim — Personal Data Notice',  out: 'en/kvkk.html' },
   { tip: 'terms',   dil: 'en', src: 'kullanici-sozlesmesi-en.md',   title: 'Kartlarim — Terms of Service',      out: 'en/terms.html' },
+  // Google Play veri silme politikası: uygulama dışından erişilebilen silme sayfası zorunlu.
+  { tip: 'hesap-silme', dil: 'tr', src: 'hesap-silme.md',    title: 'Kartlarım — Hesap ve Veri Silme',       out: 'hesap-silme.html' },
+  { tip: 'hesap-silme', dil: 'en', src: 'hesap-silme-en.md', title: 'Kartlarim — Account and Data Deletion', out: 'en/hesap-silme.html' },
 ];
 
 const STYLE = `
@@ -88,8 +91,8 @@ function mdToHtml(md) {
 
 function nav(currentTip, currentDil) {
   const tips = {
-    tr: { privacy:'Gizlilik', kvkk:'KVKK Aydınlatma', terms:'Kullanıcı Sözleşmesi' },
-    en: { privacy:'Privacy',  kvkk:'KVKK Notice',     terms:'Terms of Service' }
+    tr: { privacy:'Gizlilik', kvkk:'KVKK Aydınlatma', terms:'Kullanıcı Sözleşmesi', 'hesap-silme':'Hesap Silme' },
+    en: { privacy:'Privacy',  kvkk:'KVKK Notice',     terms:'Terms of Service',     'hesap-silme':'Account Deletion' }
   };
   const items = Object.entries(tips[currentDil]).map(([t, label]) => {
     if (t === currentTip) return `<a aria-current="page" style="background:var(--accent);color:var(--bg)">${label}</a>`;
@@ -153,6 +156,7 @@ ${STYLE}
   <a href="privacy.html">Gizlilik Politikası</a>
   <a href="kvkk.html">KVKK Aydınlatma Metni</a>
   <a href="terms.html">Kullanıcı Sözleşmesi</a>
+  <a href="hesap-silme.html">Hesap ve Veri Silme</a>
 </nav>
 
 <h2>🇬🇧 English</h2>
@@ -160,6 +164,7 @@ ${STYLE}
   <a href="en/privacy.html">Privacy Policy</a>
   <a href="en/kvkk.html">Personal Data Notice (KVKK)</a>
   <a href="en/terms.html">Terms of Service</a>
+  <a href="en/hesap-silme.html">Account and Data Deletion</a>
 </nav>
 
 <h2>İletişim / Contact</h2>
