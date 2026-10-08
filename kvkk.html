@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kartlarım — KVKK Aydınlatma Metni</title>
+<title>maPocket — KVKK Aydınlatma Metni</title>
 <style>
 :root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
 @media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
@@ -32,8 +32,9 @@ a{color:var(--accent)}
 </head>
 <body>
 <nav><a href="index.html">⬅ Ana sayfa</a><a href="privacy.html">Gizlilik</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">KVKK Aydınlatma</a><a href="terms.html">Kullanıcı Sözleşmesi</a><a href="hesap-silme.html">Hesap Silme</a><a class="lang" href="en/kvkk.html">🇬🇧 English</a></nav>
-<h1>KVKK Aydınlatma Metni — Kartlarım</h1>
+<h1>KVKK Aydınlatma Metni — maPocket</h1>
 <blockquote>
+<p><strong>v4 (2026-10-08):</strong> Uygulama adı Kartlarım → <strong>maPocket</strong> oldu. Metin yeniden koda karşı denetlendi. v3&#39;ten sonra değişenler: <strong>Apple ile giriş</strong> (iOS) ve <strong>Firebase Remote Config</strong> beyana eklendi; avatar ve abonelik logosu <strong>artık cihazda üretildiği</strong> için <code>ui-avatars.com</code> ve Google favicon servisi (ve bunlara dayanan meşru menfaat maddesi) çıkarıldı; <strong>AppLovin MAX</strong> uygulamada olmadığı için çıkarıldı; uygulamada olmayan <strong>Smart Scan</strong> ve kamera/mikrofon ifadesi düzeltildi; misafir modunda işlenen anonim kimlikler (RevenueCat, Firebase kurulum kimliği) açıkça yazıldı; iOS <strong>ATT</strong> ve UMP <strong>gizlilik seçenekleri</strong> Bölüm 9&#39;a eklendi. <strong><code>AYDINLATMA_VERSIYON</code> 1 → 2 yükseltildi: mevcut kullanıcılar aydınlatma onayını yeniden verir.</strong></p>
 <p><strong>v3 — kod denetimi hizalaması (2026-08-16):</strong> Metin, yayına çıkacak sürümün
 koduyla satır satır karşılaştırılarak düzeltildi. Değişenler: Crashlytics ve
 Analytics kullanılmadığı için beyandan çıkarıldı; e-posta/parola ile kayıt ve
@@ -44,13 +45,13 @@ avatar ve logo servislerine giden veriler beyan edildi.</p>
 </blockquote>
 <hr>
 <h2>KİŞİSEL VERİLERİN KORUNMASI KANUNU KAPSAMINDA AYDINLATMA METNİ</h2>
-<p><strong>Veri Sorumlusu:</strong> Fatih Acı<br><strong>İletişim:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Uygulama:</strong> Kartlarım — Kişisel Finansal Takip Asistanı<br><strong>Yürürlük Tarihi:</strong> 16 Ağustos 2026 (v3)</p>
+<p><strong>Veri Sorumlusu:</strong> Fatih Acı<br><strong>İletişim:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Uygulama:</strong> maPocket (eski adı Kartlarım) — Kişisel Finansal Takip Asistanı<br><strong>Yürürlük Tarihi:</strong> 8 Ekim 2026 (v4)</p>
 <p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu&#39;nun (&quot;KVKK&quot;) 10. maddesi uyarınca hazırlanmıştır.</p>
 <blockquote>
-<p><strong>Önemli Mimari Bilgisi:</strong> Kartlarım <strong>local-first</strong> bir uygulamadır. Finansal verileriniz (kart, borç, ödeme, gider) <strong>yalnızca cihazınızda</strong> tutulur; tarafımıza ait herhangi bir sunucuda saklanmaz. Yedeklemeler kendi seçtiğiniz bulut hizmetine gider — biz tutmayız, görmeyiz, erişemeyiz.</p>
+<p><strong>Önemli Mimari Bilgisi:</strong> maPocket <strong>local-first</strong> bir uygulamadır. Finansal verileriniz (kart, borç, ödeme, gider) <strong>yalnızca cihazınızda</strong> tutulur; tarafımıza ait herhangi bir sunucuda saklanmaz. Yedeklemeler kendi seçtiğiniz bulut hizmetine gider — biz tutmayız, görmeyiz, erişemeyiz.</p>
 </blockquote>
 <h3>1. İşlenen Kişisel Veriler ve İşleme Amaçları</h3>
-<p>Kartlarım, yeni mimarisi gereği <strong>asgari düzeyde</strong> kişisel veri işler:</p>
+<p>maPocket, yeni mimarisi gereği <strong>asgari düzeyde</strong> kişisel veri işler:</p>
 <table>
 <thead>
 <tr>
@@ -61,6 +62,11 @@ avatar ve logo servislerine giden veriler beyan edildi.</p>
 </thead>
 <tbody><tr>
 <td>Google hesabınızın e-posta adresi ve adı — <em>yalnızca Google ile giriş seçerseniz</em></td>
+<td>Kimlik doğrulama</td>
+<td>Google Firebase Auth (yurt dışı)</td>
+</tr>
+<tr>
+<td>Apple hesabınızın e-posta adresi (ya da Apple&#39;ın sağladığı gizli yönlendirme adresi) ve adı — <em>yalnızca Apple ile giriş seçerseniz (iOS)</em></td>
 <td>Kimlik doğrulama</td>
 <td>Google Firebase Auth (yurt dışı)</td>
 </tr>
@@ -82,22 +88,30 @@ avatar ve logo servislerine giden veriler beyan edildi.</p>
 <tr>
 <td>Reklam ID (sadece free planda, anonim)</td>
 <td>Reklam gösterimi (rıza ile kişiselleştirme)</td>
-<td>Google AdMob / AppLovin (yurt dışı)</td>
+<td>Google AdMob (yurt dışı)</td>
 </tr>
 <tr>
-<td>Görünen adınızın baş harfleri</td>
-<td>Profil avatarı görselinin üretilmesi</td>
-<td>ui-avatars.com (yurt dışı)</td>
+<td>Firebase kurulum kimliği ve IP adresi (anonim, uygulama kurulumuna özgü) — <em>hesap açmasanız da</em></td>
+<td>Uzaktan yapılandırma (Firebase Remote Config): reklam gösterim ayarlarının uygulama güncellemesi gerektirmeden yönetilmesi</td>
+<td>Google Firebase (yurt dışı)</td>
+</tr>
+<tr>
+<td>RevenueCat anonim kullanıcı kimliği — <em>hesap açmasanız da</em></td>
+<td>Abonelik durumunun sorgulanması</td>
+<td>RevenueCat (yurt dışı)</td>
 </tr>
 </tbody></table>
 <blockquote>
 <p><strong>Misafir modu:</strong> Uygulamayı hesap açmadan &quot;Misafir olarak devam et&quot; ile
-kullanabilirsiniz. Bu modda <strong>hiçbir hesap verisi işlenmez</strong> — kimlik
-doğrulama yapılmaz, e-posta ve UID oluşturulmaz. Yalnızca reklam gösterimi
-için gereken anonim reklam ID&#39;si işlenir.</p>
+kullanabilirsiniz. Bu modda <strong>hesap verisi işlenmez</strong> — kimlik doğrulama
+yapılmaz; e-posta, ad ve Firebase UID oluşturulmaz. Ancak abonelik ve reklam
+altyapısı hesap açmasanız da çalışır; bu nedenle <strong>anonim</strong> kimlikler işlenir:
+RevenueCat anonim kullanıcı kimliği, Firebase kurulum kimliği (Remote Config)
+ve — ücretsiz planda — reklam ID&#39;si. Bunlar sizi ad, e-posta ya da finansal
+verinizle ilişkilendirmez.</p>
 </blockquote>
 <blockquote>
-<p><strong>Hata ve kullanım analizi yapılmaz.</strong> Kartlarım&#39;da Firebase Crashlytics ya da
+<p><strong>Hata ve kullanım analizi yapılmaz.</strong> maPocket&#39;te Firebase Crashlytics ya da
 Firebase Analytics <strong>kullanılmamaktadır</strong>; tarafımıza hata raporu veya kullanım
 istatistiği gönderilmez. Uygulama çökmelerine ilişkin anonim raporlar yalnızca
 Apple ve Google&#39;ın işletim sistemi düzeyindeki kendi raporlama mekanizmaları
@@ -113,10 +127,10 @@ Apple ve Google&#39;ın işletim sistemi düzeyindeki kendi raporlama mekanizmal
 <li><strong>CVC, kart güvenlik kodu</strong></li>
 <li><strong>Banka tahsilat / ödeme yönlendirme bilgisi</strong></li>
 <li><strong>Konum verisi</strong></li>
-<li><strong>Rehber, fotoğraf, dosya, medya, mikrofon</strong> (Smart Scan haricinde — orada yalnızca kullanıcı tetiklemesinde anlık çalışır, görüntü saklanmaz)</li>
+<li><strong>Rehber, fotoğraf, kamera, mikrofon ve cihazdaki diğer dosya ve medyanız</strong> — uygulama bu izinleri istemez ve bunlara erişmez</li>
 </ul>
 <blockquote>
-<p><strong>Snap-Sync Felsefesi:</strong> Kartlarım bankaya doğrudan erişmez. Kullanıcı banka uygulamasındaki rakamları manuel girer (snapshot). Bu nedenle Açık Bankacılık (Open Banking) regülasyonları uygulamamız için tetiklenmez. <strong>Bankaya bağlanmadığımız gibi, finansal verinizi sunucumuzda da tutmayız.</strong></p>
+<p><strong>Snap-Sync Felsefesi:</strong> maPocket bankaya doğrudan erişmez. Kullanıcı banka uygulamasındaki rakamları manuel girer (snapshot). Bu nedenle Açık Bankacılık (Open Banking) regülasyonları uygulamamız için tetiklenmez. <strong>Bankaya bağlanmadığımız gibi, finansal verinizi sunucumuzda da tutmayız.</strong></p>
 </blockquote>
 <h3>2. Kişisel Verilerin Aktarıldığı Taraflar (Yurt Dışı Aktarım Dahil)</h3>
 <p>Aşağıdaki hizmet sağlayıcıların sunucuları yurt dışında (ABD/AB) bulunmaktadır; verilerin bir kısmı KVKK m.9 kapsamında yurt dışına aktarılmaktadır.</p>
@@ -135,14 +149,19 @@ Apple ve Google&#39;ın işletim sistemi düzeyindeki kendi raporlama mekanizmal
 <td>ABD/AB</td>
 </tr>
 <tr>
-<td>Google LLC (AdMob)</td>
-<td>Anonim reklam ID, reklam performansı</td>
+<td>Google LLC (Firebase Remote Config)</td>
+<td>Firebase kurulum kimliği, IP adresi</td>
 <td>ABD/AB</td>
 </tr>
 <tr>
-<td>AppLovin Corp. (MAX mediation)</td>
-<td>Anonim reklam ID</td>
-<td>ABD</td>
+<td>Apple Inc. (Apple ile giriş)</td>
+<td>E-posta (veya gizli yönlendirme adresi), ad</td>
+<td>ABD/İrlanda</td>
+</tr>
+<tr>
+<td>Google LLC (AdMob)</td>
+<td>Anonim reklam ID, reklam performansı</td>
+<td>ABD/AB</td>
 </tr>
 <tr>
 <td>RevenueCat Inc.</td>
@@ -159,25 +178,15 @@ Apple ve Google&#39;ın işletim sistemi düzeyindeki kendi raporlama mekanizmal
 <td>Abonelik metaverisi, satın alma kaydı</td>
 <td>ABD/AB</td>
 </tr>
-<tr>
-<td>ui-avatars.com</td>
-<td>Görünen adınızın baş harfleri (profil avatarı görseli üretmek için)</td>
-<td>ABD</td>
-</tr>
-<tr>
-<td>Google LLC (favicon servisi)</td>
-<td>Takip ettiğiniz abonelik hizmetinin alan adı (ör. <code>netflix.com</code>), ilgili hizmetin logosunu göstermek için</td>
-<td>ABD/AB</td>
-</tr>
 </tbody></table>
 <p><strong>Üçüncü taraflarla ticari amaçlarla veri paylaşılmaz, satılmaz.</strong></p>
 <p><strong>Tarafımıza ait sunucu yoktur.</strong> Mimari local-first olarak son halini almıştır; eski &quot;Türkiye&#39;de Cloud Sync&quot; planı uygulamaya alınmamıştır.</p>
 <h3>3. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Dayanağı</h3>
-<p>Kişisel veriler; sizin seçtiğiniz giriş yöntemine göre <strong>uygulama içi Google ile giriş akışı</strong> veya <strong>e-posta/parola ile kayıt akışı</strong>, ayrıca premium abonelik akışı (RevenueCat → Apple / Google Play) yoluyla, tamamen otomatik olmayan yollarla toplanır. <strong>Misafir modunu seçerseniz bu toplamaların hiçbiri gerçekleşmez.</strong></p>
+<p>Kişisel veriler; sizin seçtiğiniz giriş yöntemine göre <strong>uygulama içi Google ya da Apple ile giriş akışı</strong> veya <strong>e-posta/parola ile kayıt akışı</strong>, ayrıca premium abonelik akışı (RevenueCat → Apple / Google Play) yoluyla, tamamen otomatik olmayan yollarla toplanır. <strong>Misafir modunu seçerseniz hesap verisi toplanmaz; yalnızca yukarıda belirtilen anonim kimlikler işlenir.</strong></p>
 <p><strong>Hukuki dayanak:</strong></p>
 <ul>
 <li><strong>KVKK md. 5/2-c (sözleşmenin kurulması ve ifası):</strong> Kimlik doğrulama (Firebase Auth), premium abonelik (RevenueCat / Apple / Google Play).</li>
-<li><strong>KVKK md. 5/2-f (meşru menfaat):</strong> Profil avatarı görselinin üretilmesi ve abonelik hizmeti logolarının gösterilmesi — yalnızca arayüzün okunabilirliğine hizmet eden, temel hak ve özgürlükleri zedelemeyen işleme.</li>
+<li><strong>KVKK md. 5/2-f (meşru menfaat):</strong> Uzaktan yapılandırma (Firebase Remote Config) ve abonelik durumunun sorgulanması için anonim kurulum kimlikleri — uygulamanın çalışması ve reklam ayarlarının yönetimi için gerekli, temel hak ve özgürlükleri zedelemeyen işleme.</li>
 <li><strong>KVKK md. 5/1 (açık rıza):</strong> Reklam personalizasyonu (AdMob UMP rıza ekranı). Rıza vermeseniz de uygulamayı kullanabilirsiniz; bu durumda kişiselleştirilmemiş reklam gösterilir.</li>
 </ul>
 <h3>4. Veri Sahibi Olarak Haklarınız (KVKK Madde 11)</h3>
@@ -223,6 +232,7 @@ sonuçlandırılır. Uygulama dışından başvuru yolu ayrıca
 <li><strong>Firebase Auth (e-posta, ad, UID):</strong> Hesap silene kadar</li>
 <li><strong>RevenueCat abonelik metaverisi:</strong> Abonelik süresi + denetim için ek dönem (RC saklama politikası)</li>
 <li><strong>AdMob reklam ID logları:</strong> ~60 gün (AdMob varsayılan)</li>
+<li><strong>Firebase kurulum kimliği (Remote Config):</strong> Google&#39;ın Firebase saklama politikasına tabidir</li>
 <li><strong>Premium ödeme metaverisi:</strong> Vergi ve abonelik denetim yükümlülüğü gereği 10 yıl (Apple/Google tarafında)</li>
 </ul>
 <h3>6. Yedekleme (Tüm Kullanıcılar — Kullanıcı Kontrolünde)</h3>
@@ -242,16 +252,17 @@ sonuçlandırılır. Uygulama dışından başvuru yolu ayrıca
 </blockquote>
 <h3>7. Veri Güvenliği Önlemleri (KVKK m.12)</h3>
 <ul>
-<li><strong>Yerel saklama:</strong> Veriler, cihazda yalnızca Kartlarım&#39;a ayrılmış özel uygulama alanında tutulur (iOS <code>UserDefaults</code> / Android <code>SharedPreferences</code> ve uygulamanın kendi web deposu). Bu alana cihazdaki diğer uygulamalar erişemez ve veriler işletim sisteminin cihaz şifrelemesi (iOS Data Protection / Android File-Based Encryption) kapsamındadır. <strong>Uygulama bu verilere ayrıca kendi şifreleme katmanını uygulamaz;</strong> cihazınızın ekran kilidini açık bırakmamanız güvenliğin bir parçasıdır</li>
+<li><strong>Yerel saklama:</strong> Veriler, cihazda yalnızca maPocket&#39;e ayrılmış özel uygulama alanında tutulur (iOS <code>UserDefaults</code> / Android <code>SharedPreferences</code> ve uygulamanın kendi web deposu). Bu alana cihazdaki diğer uygulamalar erişemez ve veriler işletim sisteminin cihaz şifrelemesi (iOS Data Protection / Android File-Based Encryption) kapsamındadır. <strong>Uygulama bu verilere ayrıca kendi şifreleme katmanını uygulamaz;</strong> cihazınızın ekran kilidini açık bırakmamanız güvenliğin bir parçasıdır</li>
 <li><strong>Yedek şifreleme:</strong> AES-256-GCM + PBKDF2 (100.000 iterasyon) — kullanıcı parolası temelli, anahtar tarafımızda değildir</li>
 <li><strong>Aktarım güvenliği:</strong> Firebase / RevenueCat / Apple / Google çağrıları TLS 1.3 (HTTPS) üzerinden yapılır</li>
 <li><strong>Sunucu erişimi:</strong> Tarafımıza ait sunucu yoktur; üçüncü taraf servislerin (Firebase, RevenueCat) güvenlik standartları geçerlidir</li>
 <li><strong>Veri ihlali bildirimi:</strong> KVKK m.12/5 kapsamında, fark edilen veri ihlali 72 saat içinde Kurul&#39;a ve etkilenen veri sahiplerine bildirilir</li>
 </ul>
 <h3>8. Çocukların Verileri</h3>
-<p>Kartlarım 13 yaşın altındaki çocuklara yönelik değildir; bu yaş grubundan bilerek veri toplanmaz. Uygulama 18+ yetişkin kullanıcılara yönelik bir finansal araçtır.</p>
+<p>maPocket 13 yaşın altındaki çocuklara yönelik değildir; bu yaş grubundan bilerek veri toplanmaz. Uygulama 18+ yetişkin kullanıcılara yönelik bir finansal araçtır.</p>
 <h3>9. Reklam Personalizasyonu</h3>
 <p>Free planda reklamlar gösterilir. Reklamların kişiselleştirilmesi için <strong>AdMob/UMP rıza ekranı</strong> üzerinden açık rızanız alınır. Rıza vermeseniz de uygulamayı kullanabilirsiniz; o durumda kişiselleştirilmemiş (contextual) reklam gösterilir. Premium plana geçtiğinizde reklam tamamen kapanır ve reklam ID&#39;si işlenmez.</p>
+<p>iOS&#39;ta reklam kimliğine erişim için ayrıca <strong>Uygulama İzleme İzni (ATT)</strong> sorulur; izin vermezseniz reklam kimliği kullanılmaz. Avrupa Ekonomik Alanı gibi bölgelerdeki kullanıcılar için Profil&#39;de ayrıca <strong>gizlilik seçenekleri</strong> girişi görünür.</p>
 <p>Reklam tercihinizi istediğiniz zaman Profil → &quot;Reklam Tercihlerini Sıfırla&quot; menüsünden değiştirebilirsiniz.</p>
 <h3>10. VERBİS Bilgisi</h3>
 <p>Veri Sorumlusu, KVKK Kurulu kararları uyarınca VERBİS (Veri Sorumluları Sicili) kayıt yükümlülüğü eşiklerinin (50+ çalışan veya 25 milyon TL+ yıllık mali bilanço) altında kaldığı için VERBİS kaydı zorunlu değildir. Eşik aşıldığında kayıt yapılacaktır.</p>
@@ -259,6 +270,6 @@ sonuçlandırılır. Uygulama dışından başvuru yolu ayrıca
 <p>Politikamızda değişiklik olması halinde bu sayfa güncellenir, &quot;Son güncelleme&quot; tarihi değiştirilir ve uygulama içi bildirim yapılır. Önemli değişikliklerde uygulama açılışta aydınlatma onayı yeniden istenir (versiyon kontrolü mekanizması).</p>
 <hr>
 
-<footer>Yayın: 26/05/2026 · Bu sayfa <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a> üzerinden yayınlanır. Kaynak: <code>9e50384</code>.</footer>
+<footer>Yayın: 26/05/2026 · Bu sayfa <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a> üzerinden yayınlanır. Kaynak: <code>46b138f</code>.</footer>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kartlarim — Personal Data Notice</title>
+<title>maPocket — Personal Data Notice</title>
 <style>
 :root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
 @media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
@@ -32,16 +32,16 @@ a{color:var(--accent)}
 </head>
 <body>
 <nav><a href="../index.html">⬅ Home</a><a href="privacy.html">Privacy</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">KVKK Notice</a><a href="terms.html">Terms of Service</a><a href="hesap-silme.html">Account Deletion</a><a class="lang" href="../kvkk.html">🇹🇷 Türkçe</a></nav>
-<h1>Personal Data Notice (KVKK) — Kartlarim</h1>
+<h1>Personal Data Notice (KVKK) — maPocket</h1>
 <hr>
 <h2>PERSONAL DATA NOTICE UNDER TURKISH DATA PROTECTION LAW (KVKK)</h2>
-<p><strong>Data Controller:</strong> Fatih Acı<br><strong>Contact:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Application:</strong> Kartlarim — Personal Finance Tracker<br><strong>Effective Date:</strong> 16 August 2026 (v3)</p>
+<p><strong>Data Controller:</strong> Fatih Acı<br><strong>Contact:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Application:</strong> maPocket (formerly Kartlarım) — Personal Finance Tracker<br><strong>Effective Date:</strong> 8 October 2026 (v4)</p>
 <p>This notice is prepared pursuant to Article 10 of the Turkish Personal Data Protection Law No. 6698 (&quot;KVKK&quot;).</p>
 <blockquote>
-<p><strong>Architecture Note:</strong> Kartlarim is a <strong>local-first</strong> application. Your financial data (cards, debts, payments, expenses) is stored <strong>only on your device</strong>; it is not stored on any server we operate. Backups go to a cloud service of your choice — we do not retain, view, or have access to them.</p>
+<p><strong>Architecture Note:</strong> maPocket is a <strong>local-first</strong> application. Your financial data (cards, debts, payments, expenses) is stored <strong>only on your device</strong>; it is not stored on any server we operate. Backups go to a cloud service of your choice — we do not retain, view, or have access to them.</p>
 </blockquote>
 <h3>1. Personal Data Processed and Purposes of Processing</h3>
-<p>Under its new architecture, Kartlarim processes data at a <strong>minimal scale</strong>:</p>
+<p>Under its new architecture, maPocket processes data at a <strong>minimal scale</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -52,6 +52,11 @@ a{color:var(--accent)}
 </thead>
 <tbody><tr>
 <td>Your Google account email and name — <em>only if you choose Google sign-in</em></td>
+<td>Identity verification</td>
+<td>Google Firebase Auth (international)</td>
+</tr>
+<tr>
+<td>Your Apple account email (or the private relay address Apple provides) and name — <em>only if you choose Sign in with Apple (iOS)</em></td>
 <td>Identity verification</td>
 <td>Google Firebase Auth (international)</td>
 </tr>
@@ -73,22 +78,30 @@ a{color:var(--accent)}
 <tr>
 <td>Advertising ID (free plan only, anonymous)</td>
 <td>Ad display (with consent for personalization)</td>
-<td>Google AdMob / AppLovin (international)</td>
+<td>Google AdMob (international)</td>
 </tr>
 <tr>
-<td>Initials of your display name</td>
-<td>Generating the profile avatar image</td>
-<td>ui-avatars.com (international)</td>
+<td>Firebase installation ID and IP address (anonymous, specific to the app installation) — <em>even without an account</em></td>
+<td>Remote configuration (Firebase Remote Config): managing ad display settings without an app update</td>
+<td>Google Firebase (international)</td>
+</tr>
+<tr>
+<td>RevenueCat anonymous user ID — <em>even without an account</em></td>
+<td>Querying subscription status</td>
+<td>RevenueCat (international)</td>
 </tr>
 </tbody></table>
 <blockquote>
 <p><strong>Guest mode:</strong> You can use the app without an account via &quot;Continue as guest&quot;.
-In this mode <strong>no account data is processed</strong> — no identity verification, no
-email or UID is created. Only the anonymous advertising ID required for ad
-display is processed.</p>
+In this mode <strong>no account data is processed</strong> — no identity verification is
+performed and no email, name or Firebase UID is created. However, the
+subscription and advertising infrastructure runs even without an account, so
+<strong>anonymous</strong> identifiers are processed: the RevenueCat anonymous user ID, the
+Firebase installation ID (Remote Config) and — on the free plan — the
+advertising ID. These do not link you to your name, email or financial data.</p>
 </blockquote>
 <blockquote>
-<p><strong>No crash or usage analytics.</strong> Kartlarim does <strong>not</strong> use Firebase Crashlytics
+<p><strong>No crash or usage analytics.</strong> maPocket does <strong>not</strong> use Firebase Crashlytics
 or Firebase Analytics; no crash report or usage statistic is sent to us.
 Anonymous crash reports exist only through Apple&#39;s and Google&#39;s own
 operating-system level reporting, subject to your device settings.</p>
@@ -103,10 +116,10 @@ operating-system level reporting, subject to your device settings.</p>
 <li><strong>CVC or card security code</strong></li>
 <li><strong>Bank payment / transfer authorization information</strong></li>
 <li><strong>Location data</strong></li>
-<li><strong>Contacts, photos, files, media, microphone</strong> (except for Smart Scan — which runs instantly on user trigger and does not save images)</li>
+<li><strong>Contacts, photos, camera, microphone and the other files and media on your device</strong> — the app does not request these permissions and does not access them</li>
 </ul>
 <blockquote>
-<p><strong>Snap-Sync Philosophy:</strong> Kartlarim does not connect directly to any bank. The user manually enters numbers from their bank app (snapshot). Therefore, Open Banking regulations are not triggered for our application. <strong>We don&#39;t connect to your bank, and we don&#39;t keep your financial data on our servers.</strong></p>
+<p><strong>Snap-Sync Philosophy:</strong> maPocket does not connect directly to any bank. The user manually enters numbers from their bank app (snapshot). Therefore, Open Banking regulations are not triggered for our application. <strong>We don&#39;t connect to your bank, and we don&#39;t keep your financial data on our servers.</strong></p>
 </blockquote>
 <h3>2. Recipients of Personal Data (Including International Transfers)</h3>
 <p>The following service providers&#39; servers are located internationally (USA/EU); some data is transferred internationally under KVKK Article 9.</p>
@@ -125,14 +138,19 @@ operating-system level reporting, subject to your device settings.</p>
 <td>USA/EU</td>
 </tr>
 <tr>
-<td>Google LLC (AdMob)</td>
-<td>Anonymous ad ID, ad performance</td>
+<td>Google LLC (Firebase Remote Config)</td>
+<td>Firebase installation ID, IP address</td>
 <td>USA/EU</td>
 </tr>
 <tr>
-<td>AppLovin Corp. (MAX mediation)</td>
-<td>Anonymous ad ID</td>
-<td>USA</td>
+<td>Apple Inc. (Sign in with Apple)</td>
+<td>Email (or private relay address), name</td>
+<td>USA/Ireland</td>
+</tr>
+<tr>
+<td>Google LLC (AdMob)</td>
+<td>Anonymous ad ID, ad performance</td>
+<td>USA/EU</td>
 </tr>
 <tr>
 <td>RevenueCat Inc.</td>
@@ -149,25 +167,15 @@ operating-system level reporting, subject to your device settings.</p>
 <td>Subscription metadata, purchase record</td>
 <td>USA/EU</td>
 </tr>
-<tr>
-<td>ui-avatars.com</td>
-<td>Initials of your display name, to generate the profile avatar image</td>
-<td>USA</td>
-</tr>
-<tr>
-<td>Google LLC (favicon service)</td>
-<td>The domain of a subscription service you track (e.g. <code>netflix.com</code>), to display its logo</td>
-<td>USA/EU</td>
-</tr>
 </tbody></table>
 <p><strong>Personal data is not shared with third parties for commercial purposes and is not sold.</strong></p>
 <p><strong>We do not operate any server of our own.</strong> The architecture is finalized as local-first; the previous &quot;Türkiye Cloud Sync&quot; plan has not been deployed.</p>
 <h3>3. Method of Collection and Legal Basis</h3>
-<p>Depending on the sign-in method you choose, personal data is collected through the <strong>in-app Google sign-in flow</strong> or the <strong>email/password registration flow</strong>, and through the premium subscription flow (RevenueCat → Apple / Google Play). <strong>If you choose guest mode, none of this collection takes place.</strong></p>
+<p>Depending on the sign-in method you choose, personal data is collected through the <strong>in-app Google or Apple sign-in flow</strong> or the <strong>email/password registration flow</strong>, and through the premium subscription flow (RevenueCat → Apple / Google Play). <strong>If you choose guest mode, no account data is collected; only the anonymous identifiers described above are processed.</strong></p>
 <p><strong>Legal Basis:</strong></p>
 <ul>
 <li><strong>KVKK Art. 5/2-c (necessary for the conclusion or performance of a contract):</strong> Identity verification (Firebase Auth), premium subscription (RevenueCat / Apple / Google Play).</li>
-<li><strong>KVKK Art. 5/2-f (legitimate interest):</strong> Generating the profile avatar image and displaying subscription service logos — processing that serves only interface readability and does not harm fundamental rights.</li>
+<li><strong>KVKK Art. 5/2-f (legitimate interest):</strong> Anonymous installation identifiers for remote configuration (Firebase Remote Config) and subscription status queries — necessary for the app to operate and for managing ad settings, and does not harm fundamental rights.</li>
 <li><strong>KVKK Art. 5/1 (explicit consent):</strong> Ad personalization (AdMob UMP consent screen). If you do not consent, you can still use the app; non-personalized ads will be shown.</li>
 </ul>
 <h3>4. Your Rights as a Data Subject (KVKK Article 11)</h3>
@@ -212,6 +220,7 @@ request route is also described at
 <li><strong>Firebase Auth (email, name, UID):</strong> Until account deletion</li>
 <li><strong>RevenueCat subscription metadata:</strong> Subscription period + audit period (per RC retention policy)</li>
 <li><strong>AdMob ad ID logs:</strong> ~60 days (AdMob default)</li>
+<li><strong>Firebase installation ID (Remote Config):</strong> subject to Google&#39;s Firebase retention policy</li>
 <li><strong>Premium payment metadata:</strong> 10 years (per tax and subscription audit obligation, on Apple/Google&#39;s side)</li>
 </ul>
 <h3>6. Backup (All Users — User-Controlled)</h3>
@@ -238,9 +247,10 @@ request route is also described at
 <li><strong>Data breach notification:</strong> Per KVKK Art. 12/5, a discovered data breach is reported to the Authority and affected data subjects within 72 hours</li>
 </ul>
 <h3>8. Children&#39;s Data</h3>
-<p>Kartlarim is not directed at children under 13; data is not knowingly collected from this age group. The application is a financial tool for adult users aged 18+.</p>
+<p>maPocket is not directed at children under 13; data is not knowingly collected from this age group. The application is a financial tool for adult users aged 18+.</p>
 <h3>9. Ad Personalization</h3>
 <p>Ads are shown on the free plan. Explicit consent is obtained through the <strong>AdMob/UMP consent screen</strong> for ad personalization. If you do not consent, you can still use the app; non-personalized (contextual) ads will be shown. When you switch to the premium plan, ads are turned off entirely and the ad ID is not processed.</p>
+<p>On iOS, access to the advertising identifier is additionally requested through <strong>App Tracking Transparency (ATT)</strong>; if you decline, the advertising identifier is not used. For users in regions such as the European Economic Area, a <strong>privacy options</strong> entry also appears in Profile.</p>
 <p>You can change your ad preference at any time from Profile → &quot;Reset Ad Preferences&quot;.</p>
 <h3>10. VERBİS Notice</h3>
 <p>The Data Controller is not required to register with VERBİS (Data Controllers Registry) because they fall below the thresholds set by the KVKK Authority (50+ employees or annual balance sheet of 25 million TL+). Registration will be made when the threshold is exceeded.</p>
@@ -248,6 +258,6 @@ request route is also described at
 <p>If the policy changes, this page is updated, the &quot;Last Updated&quot; date is changed, and in-app notification is given. For significant changes, the in-app data notice consent is requested again at launch (versioning mechanism).</p>
 <hr>
 
-<footer>Published: 05/26/2026 · This page is published from <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a>. Source: <code>9e50384</code>.</footer>
+<footer>Published: 05/26/2026 · This page is published from <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a>. Source: <code>46b138f</code>.</footer>
 </body>
 </html>

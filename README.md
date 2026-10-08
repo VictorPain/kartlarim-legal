@@ -27,7 +27,7 @@ kartlarim-legal/
 Tüm yasal metinlerin **tek doğruluk kaynağı** sibling `sanalFatih` wiki'sidir:
 
 ```
-../sanalFatih/wiki/projeler/kartlarim/yasal/
+../sanalFatih/wiki/projeler/mapocket/yasal/
 ├── privacy-policy-tr.md
 ├── privacy-policy-en.md
 ├── kvkk-aydinlatma-metni.md
@@ -71,7 +71,7 @@ HTML'ler `build.mjs` ile üretilir; **elle düzenlenmez** (bir sonraki build eze
 
 ```bash
 # 1. Metni wiki'de değiştir (tek doğruluk kaynağı)
-#    ../sanalFatih/wiki/projeler/kartlarim/yasal/*.md
+#    ../sanalFatih/wiki/projeler/mapocket/yasal/*.md
 # 2. HTML üret
 cd kartlarim-legal && node build.mjs
 # 3. Yayınla

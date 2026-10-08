@@ -12,18 +12,18 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // kartlarim-legal, sanalFatih wiki ile sibling bağımsız bir repo'dur.
-const WIKI = resolve(__dirname, '../sanalFatih/wiki/projeler/kartlarim/yasal');
+const WIKI = resolve(__dirname, '../sanalFatih/wiki/projeler/mapocket/yasal');
 
 const PAGES = [
-  { tip: 'privacy', dil: 'tr', src: 'privacy-policy-tr.md',         title: 'Kartlarım — Gizlilik Politikası',   out: 'privacy.html' },
-  { tip: 'kvkk',    dil: 'tr', src: 'kvkk-aydinlatma-metni.md',     title: 'Kartlarım — KVKK Aydınlatma Metni', out: 'kvkk.html' },
-  { tip: 'terms',   dil: 'tr', src: 'kullanici-sozlesmesi.md',      title: 'Kartlarım — Kullanıcı Sözleşmesi',  out: 'terms.html' },
-  { tip: 'privacy', dil: 'en', src: 'privacy-policy-en.md',         title: 'Kartlarim — Privacy Policy',        out: 'en/privacy.html' },
-  { tip: 'kvkk',    dil: 'en', src: 'kvkk-aydinlatma-metni-en.md',  title: 'Kartlarim — Personal Data Notice',  out: 'en/kvkk.html' },
-  { tip: 'terms',   dil: 'en', src: 'kullanici-sozlesmesi-en.md',   title: 'Kartlarim — Terms of Service',      out: 'en/terms.html' },
+  { tip: 'privacy', dil: 'tr', src: 'privacy-policy-tr.md',         title: 'maPocket — Gizlilik Politikası',   out: 'privacy.html' },
+  { tip: 'kvkk',    dil: 'tr', src: 'kvkk-aydinlatma-metni.md',     title: 'maPocket — KVKK Aydınlatma Metni', out: 'kvkk.html' },
+  { tip: 'terms',   dil: 'tr', src: 'kullanici-sozlesmesi.md',      title: 'maPocket — Kullanıcı Sözleşmesi',  out: 'terms.html' },
+  { tip: 'privacy', dil: 'en', src: 'privacy-policy-en.md',         title: 'maPocket — Privacy Policy',        out: 'en/privacy.html' },
+  { tip: 'kvkk',    dil: 'en', src: 'kvkk-aydinlatma-metni-en.md',  title: 'maPocket — Personal Data Notice',  out: 'en/kvkk.html' },
+  { tip: 'terms',   dil: 'en', src: 'kullanici-sozlesmesi-en.md',   title: 'maPocket — Terms of Service',      out: 'en/terms.html' },
   // Google Play veri silme politikası: uygulama dışından erişilebilen silme sayfası zorunlu.
-  { tip: 'hesap-silme', dil: 'tr', src: 'hesap-silme.md',    title: 'Kartlarım — Hesap ve Veri Silme',       out: 'hesap-silme.html' },
-  { tip: 'hesap-silme', dil: 'en', src: 'hesap-silme-en.md', title: 'Kartlarim — Account and Data Deletion', out: 'en/hesap-silme.html' },
+  { tip: 'hesap-silme', dil: 'tr', src: 'hesap-silme.md',    title: 'maPocket — Hesap ve Veri Silme',       out: 'hesap-silme.html' },
+  { tip: 'hesap-silme', dil: 'en', src: 'hesap-silme-en.md', title: 'maPocket — Account and Data Deletion', out: 'en/hesap-silme.html' },
 ];
 
 const STYLE = `
@@ -142,14 +142,14 @@ function indexHtml(commitHash) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kartlarım — Yasal Bilgiler / Legal</title>
+<title>maPocket — Yasal Bilgiler / Legal</title>
 <style>
 ${STYLE}
 </style>
 </head>
 <body>
-<h1>Kartlarım — Yasal Bilgiler</h1>
-<p class="meta">Bu sayfa Kartlarım mobil uygulamasının gizlilik politikası, KVKK aydınlatma metni ve kullanıcı sözleşmesini yayınlar.</p>
+<h1>maPocket — Yasal Bilgiler</h1>
+<p class="meta">Bu sayfa maPocket (eski adı Kartlarım) mobil uygulamasının gizlilik politikası, KVKK aydınlatma metni ve kullanıcı sözleşmesini yayınlar.</p>
 
 <h2>🇹🇷 Türkçe</h2>
 <nav>

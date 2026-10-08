@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kartlarim — Privacy Policy</title>
+<title>maPocket — Privacy Policy</title>
 <style>
 :root { color-scheme: light dark; --bg:#fff; --fg:#222; --muted:#666; --border:#e0e0e0; --accent:#2d5fb8; --warn:rgba(255,180,0,.12); --warn-b:#ffb400; }
 @media (prefers-color-scheme: dark) { :root { --bg:#1a1a1a; --fg:#e6e6e6; --muted:#999; --border:#333; --accent:#6ba3ff; } }
@@ -32,29 +32,31 @@ a{color:var(--accent)}
 </head>
 <body>
 <nav><a href="../index.html">⬅ Home</a><a aria-current="page" style="background:var(--accent);color:var(--bg)">Privacy</a><a href="kvkk.html">KVKK Notice</a><a href="terms.html">Terms of Service</a><a href="hesap-silme.html">Account Deletion</a><a class="lang" href="../privacy.html">🇹🇷 Türkçe</a></nav>
-<h1>Privacy Policy — Kartlarim</h1>
+<h1>Privacy Policy — maPocket</h1>
 <hr>
-<p><strong>Developer:</strong> Fatih Acı<br><strong>Contact:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Effective Date:</strong> 16 August 2026 (v3)</p>
-<p>This Privacy Policy explains the information collected when you use the Kartlarim mobile application (&quot;App&quot;).</p>
+<p><strong>Developer:</strong> Fatih Acı<br><strong>Contact:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a><br><strong>Effective Date:</strong> 8 October 2026 (v4)</p>
+<p>This Privacy Policy explains the information collected when you use the maPocket (formerly Kartlarım) mobile application (&quot;App&quot;).</p>
 <blockquote>
 <p><strong>Local-first architecture:</strong> Your financial data (cards, debts, payments, expenses) is stored <strong>only on your device</strong>; it is not stored on any server we operate. If you create a backup, the file goes to a cloud of your choice (iCloud, Drive, etc.) — we do not retain it.</p>
 </blockquote>
 <h3>1. Information We Collect</h3>
-<p><strong>Sign-in Methods (Firebase Auth):</strong> There are three ways to use the app:</p>
+<p><strong>Sign-in Methods (Firebase Auth):</strong> There are four ways to use the app:</p>
 <ul>
-<li><strong>As a guest</strong> — no account is created and no identity data is collected.</li>
+<li><strong>As a guest</strong> — no account is created and no identity data such as name or email is collected (except the anonymous identifiers described below).</li>
 <li><strong>Google sign-in</strong> — Google shares your name and email address.</li>
+<li><strong>Sign in with Apple (iOS)</strong> — Apple shares your name and email address (or the private relay address Apple provides).</li>
 <li><strong>Email and password registration</strong> — your email address and password are sent to Firebase Auth. We never see your password; Firebase Auth stores it hashed.</li>
 </ul>
 <p>This information is used only for identity verification.</p>
-<p><strong>Financial Data You Enter in the App:</strong> Kartlarim stores data such as card limit / available limit / debt, loan amount / installment, fixed expense, income, deferral and payment history. <strong>This data is stored only in the private application area on your device — it is not stored on or sent to any server we operate.</strong></p>
+<p><strong>Financial Data You Enter in the App:</strong> maPocket stores data such as card limit / available limit / debt, loan amount / installment, fixed expense, income, deferral and payment history. <strong>This data is stored only in the private application area on your device — it is not stored on or sent to any server we operate.</strong></p>
 <blockquote>
-<p><strong>Snap-Sync Philosophy:</strong> Kartlarim does not connect directly to any bank; bank passwords, card numbers, CVC, or open banking API access are NEVER requested. The user manually enters values like &quot;available limit&quot; from their bank app. <strong>We don&#39;t connect to your bank, and we don&#39;t keep your financial data on our servers.</strong></p>
+<p><strong>Snap-Sync Philosophy:</strong> maPocket does not connect directly to any bank; bank passwords, card numbers, CVC, or open banking API access are NEVER requested. The user manually enters values like &quot;available limit&quot; from their bank app. <strong>We don&#39;t connect to your bank, and we don&#39;t keep your financial data on our servers.</strong></p>
 </blockquote>
-<p><strong>Subscription Information (RevenueCat):</strong> Your premium subscription status is held by RevenueCat. Only your Firebase UID (anonymous user ID) and subscription status are sent to RevenueCat; name, email, and financial data are not sent.</p>
-<p><strong>Technical Data:</strong> Kartlarim does <strong>not</strong> use Firebase Crashlytics or Firebase Analytics; no crash report or usage statistic is sent to us. Anonymous crash reports exist only through Apple&#39;s and Google&#39;s own operating-system level mechanisms, subject to your device settings.</p>
-<p><strong>Interface Images:</strong> To generate your profile avatar, the initials of your display name are sent to <code>ui-avatars.com</code>; to show the logo of a subscription service you track, that service&#39;s domain (e.g. <code>netflix.com</code>) is sent to Google&#39;s favicon service. No other data is included in these requests.</p>
-<p><strong>Ad Data (AdMob + AppLovin):</strong> AdMob infrastructure (including AppLovin mediation) is used for ad display on the free plan. Your device&#39;s anonymous ad ID is sent to these services; with consent, personalized ads are shown, otherwise non-personalized ads. When premium is active, ads are turned off entirely and the ad ID is not processed.</p>
+<p><strong>Subscription Information (RevenueCat):</strong> Your premium subscription status is held by RevenueCat. Only your Firebase UID (anonymous user ID) and subscription status are sent to RevenueCat; name, email, and financial data are not sent. Even if you do not create an account (guest), RevenueCat generates an anonymous user ID for you.</p>
+<p><strong>Technical Data:</strong> maPocket does <strong>not</strong> use Firebase Crashlytics or Firebase Analytics; no crash report or usage statistic is sent to us. Anonymous crash reports exist only through Apple&#39;s and Google&#39;s own operating-system level mechanisms, subject to your device settings.</p>
+<p><strong>Remote Configuration (Firebase Remote Config):</strong> To manage ad display settings without an app update, the app connects to Firebase Remote Config at launch; this request sends Firebase&#39;s anonymous installation ID (specific to the app installation) and your IP address to Google. It works even without an account; no name, email or financial data is sent.</p>
+<p><strong>Interface Images:</strong> Your profile avatar and the images of subscription services are generated <strong>on your device</strong> (initials and colour); no data is sent outside for this purpose.</p>
+<p><strong>Ad Data (AdMob):</strong> Google AdMob is used for ad display on the free plan. Your device&#39;s anonymous ad ID is sent to AdMob; with consent, personalized ads are shown, otherwise non-personalized ads. When premium is active, ads are turned off entirely and the ad ID is not processed. On iOS, access to the advertising identifier is additionally requested through <strong>App Tracking Transparency (ATT)</strong>; if you decline, the advertising identifier is not used. In regions such as the European Economic Area, a <strong>privacy options</strong> entry also appears in Profile.</p>
 <p><strong>Premium Payment Information:</strong> Premium subscription payments go through Google Play or App Store infrastructure. <strong>Your payment card or bank information is not transmitted to us.</strong></p>
 <h3>2. Information We Don&#39;t Collect</h3>
 <ul>
@@ -62,7 +64,7 @@ a{color:var(--accent)}
 <li>Full card number (only the last 4 digits as an optional visual label)</li>
 <li>CVC or card security code</li>
 <li>Location data</li>
-<li>Microphone / camera (except Smart Scan — runs only on user trigger and does not save images)</li>
+<li>Microphone / camera (the app does not request these permissions)</li>
 <li>Contacts access</li>
 <li>Files and media on your device</li>
 <li><strong>Copy of financial data</strong> (stays on your device — not on our side)</li>
@@ -73,7 +75,7 @@ a{color:var(--accent)}
 <li>To perform the app&#39;s core financial tracking function</li>
 <li>To verify premium subscription status and to gate premium features</li>
 <li>To show ads (on free plan, with consent for personalization)</li>
-<li>To display the profile avatar and subscription logos</li>
+<li>To manage ad and subscription settings remotely (Remote Config)</li>
 </ul>
 <h3>4. Sharing with Third Parties (Including International Transfer)</h3>
 <p>The following service providers&#39; servers are located internationally (USA/EU). Some of your data is transferred to these providers as mandatory infrastructure to operate the app. As no adequacy decision of the Turkish Data Protection Board exists for the destination countries, transfers are made on the basis of the <strong>standard contract under KVKK Art. 9/2-a</strong>, and executed contracts are notified to the Board.</p>
@@ -91,14 +93,19 @@ a{color:var(--accent)}
 <td>USA / EU</td>
 </tr>
 <tr>
-<td>Google LLC (AdMob)</td>
-<td>Ad serving</td>
+<td>Google LLC (Firebase Remote Config)</td>
+<td>Remote configuration (ad settings)</td>
 <td>USA / EU</td>
 </tr>
 <tr>
-<td>AppLovin Corp. (MAX mediation)</td>
-<td>Ad mediation</td>
-<td>USA</td>
+<td>Apple Inc. (Sign in with Apple)</td>
+<td>Identity verification (iOS)</td>
+<td>USA / Ireland</td>
+</tr>
+<tr>
+<td>Google LLC (AdMob)</td>
+<td>Ad serving</td>
+<td>USA / EU</td>
 </tr>
 <tr>
 <td>RevenueCat Inc.</td>
@@ -113,16 +120,6 @@ a{color:var(--accent)}
 <tr>
 <td>Google LLC (Play Store)</td>
 <td>Payment and subscription management</td>
-<td>USA / EU</td>
-</tr>
-<tr>
-<td>ui-avatars.com</td>
-<td>Generating the profile avatar image</td>
-<td>USA</td>
-</tr>
-<tr>
-<td>Google LLC (favicon service)</td>
-<td>Displaying subscription service logos</td>
 <td>USA / EU</td>
 </tr>
 </tbody></table>
@@ -142,11 +139,11 @@ a{color:var(--accent)}
 <p><strong>⚠️ Backup passphrase:</strong> The passphrase is not transmitted to our servers and cannot be recovered. If you lose the passphrase, the backup file cannot be opened. Store your passphrase in a secure place.</p>
 </blockquote>
 <h3>7. Children&#39;s Privacy</h3>
-<p>Kartlarim is not directed at children under 13. The application is a financial tool for adult users aged 18+.</p>
+<p>maPocket is not directed at children under 13. The application is a financial tool for adult users aged 18+.</p>
 <h3>8. Deleting Your Data</h3>
 <ul>
 <li><strong>Removing the app from your device:</strong> All locally stored financial data is permanently deleted.</li>
-<li><strong>Account deletion (Profile → &quot;Delete Account&quot;):</strong> Instantly and permanently deleted — all financial data on your device + Firebase identity record + RevenueCat subscription record. <strong>No 30-day waiting period; cannot be undone.</strong></li>
+<li><strong>Account deletion (Profile → &quot;Delete Account&quot;):</strong> Instantly and permanently deleted — all financial data on your device + Firebase identity record. <strong>No 30-day waiting period; cannot be undone.</strong> <strong>Deleting your account does not end your subscription:</strong> the RevenueCat record persists with the store subscription; to stop being billed, cancel it separately in your App Store / Google Play account settings.</li>
 <li><strong>Download my data (KVKK Art. 11):</strong> From Profile → &quot;Download My Data (KVKK)&quot; you can take your device data in JSON format. Free and premium users.</li>
 <li><strong>Email application:</strong> <a href="mailto:fatihaci79@gmail.com">fatihaci79@gmail.com</a> — answered within 30 days.</li>
 </ul>
@@ -158,6 +155,6 @@ a{color:var(--accent)}
 <p>For Turkish users, see the detailed KVKK Personal Data Notice.</p>
 <hr>
 
-<footer>Published: 05/26/2026 · This page is published from <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a>. Source: <code>9e50384</code>.</footer>
+<footer>Published: 05/26/2026 · This page is published from <a href="https://github.com/VictorPain/kartlarim-legal">github.com/VictorPain/kartlarim-legal</a>. Source: <code>46b138f</code>.</footer>
 </body>
 </html>
